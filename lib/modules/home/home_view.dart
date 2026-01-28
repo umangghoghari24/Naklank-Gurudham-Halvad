@@ -1,3 +1,4 @@
+import 'package:calender/modules/satsang/satsang_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/language_service.dart';
@@ -5,6 +6,7 @@ import '../aarti/aarti_binding.dart';
 import '../aarti/aarti_view.dart';
 import '../bij/bij_binding.dart';
 import '../bij/bij_view.dart';
+import '../satsang/satsang_binding.dart';
 import 'home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -45,10 +47,17 @@ class HomeView extends GetView<HomeController> {
                 Get.to(() => BijView(), binding: BijBinding());
               },
             ),
-            _menu(Icons.history, 'history'.tr, () {}),
+            _menu(
+              Icons.play_circle_fill,
+              'satang'.tr,
+                  () {
+                Get.to(() => SatsangView(), binding: SatsangBinding());
+              },
+            ),
+
             _menu(Icons.queue_music, 'bhajan'.tr, () {}),
             _menu(Icons.photo_library, 'gallery'.tr, () {}),
-            _menu(Icons.photo_library, 'Satang'.tr, () {}),
+            _menu(Icons.history, 'history'.tr, () {}),
           ],
         ),
       ),

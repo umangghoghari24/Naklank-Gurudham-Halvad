@@ -13,6 +13,8 @@ class AppTranslations extends Translations {
       'aarti': 'આરતી સમય',
       'gallery': 'ગેલેરી',
       'contact': 'સંપર્ક',
+      'satang': 'સત્સંગ',
+      'bhajan': 'ભજન',
     },
 
     // Hindi
@@ -24,6 +26,8 @@ class AppTranslations extends Translations {
       'aarti': 'आरती समय',
       'gallery': 'गैलरी',
       'contact': 'संपर्क',
+      'satang': 'सत्संग',
+      'bhajan': 'भजन',
     },
 
     // English
@@ -35,6 +39,9 @@ class AppTranslations extends Translations {
       'aarti': 'Aarti Time',
       'gallery': 'Gallery',
       'contact': 'Contact',
+      'satang': 'Satsang',
+      'bhajan': 'Bhajan',
+
 
       // Aarti
       'ramdev_pir_aarti': 'રામદેવપીર આરતી',
