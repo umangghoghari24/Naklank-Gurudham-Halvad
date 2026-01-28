@@ -49,6 +49,7 @@ class HomeView extends GetView<HomeController> {
             _menu(Icons.history, 'history'.tr, () {}),
             _menu(Icons.queue_music, 'bhajan'.tr, () {}),
             _menu(Icons.photo_library, 'gallery'.tr, () {}),
+            _menu(Icons.photo_library, 'Satang'.tr, () {}),
           ],
         ),
       ),
