@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../utils/language_service.dart';
 import '../aarti/aarti_binding.dart';
 import '../aarti/aarti_view.dart';
 import '../bij/bij_binding.dart';
@@ -17,9 +18,7 @@ class HomeView extends GetView<HomeController> {
           PopupMenuButton<String>(
             icon: const Icon(Icons.language),
             onSelected: (value) {
-              if (value == 'gu') Get.updateLocale(const Locale('gu', 'IN'));
-              if (value == 'hi') Get.updateLocale(const Locale('hi', 'IN'));
-              if (value == 'en') Get.updateLocale(const Locale('en', 'US'));
+              LanguageService.changeLanguage(value);
             },
             itemBuilder: (_) => const [
               PopupMenuItem(value: 'gu', child: Text('ગુજરાતી')),

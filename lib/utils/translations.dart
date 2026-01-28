@@ -51,8 +51,6 @@ class AppTranslations extends Translations {
       'morning_aarti': 'Morning Aarti',
       'evening_aarti': 'Evening Aarti',
 
-
     },
-
   };
 }
