@@ -14,11 +14,11 @@ class Styles {
       fontWeight: FontWeight.w600,
       fontFamily: "Sans");
 
-  static TextStyle blackShade18_16W600 = TextStyle(
-      color: ColorConstant.blackShadeColor,
-      fontSize: Responsive.isMobile(Get.context!) ? 18.sp : 16.sp,
-      fontWeight: FontWeight.w600,
-      fontFamily: "Sans");
+  // static TextStyle blackShade18_16W600 = TextStyle(
+  //     color: ColorConstant.blackShadeColor,
+  //     fontSize: Responsive.isMobile(Get.context!) ? 18.sp : 16.sp,
+  //     fontWeight: FontWeight.w600,
+  //     fontFamily: "Sans");
 
   static TextStyle blackShade16_12W400 = TextStyle(
       color: ColorConstant.blackShadeColor,
@@ -406,11 +406,14 @@ class Styles {
       fontWeight: FontWeight.w400,
       color: ColorConstant.black,
       fontFamily: 'Sans');
-  static TextStyle black16W400 = TextStyle(
-      fontSize: 16.sp,
-      fontWeight: FontWeight.w400,
-      color: ColorConstant.black,
-      fontFamily: 'Sans');
+
+  /// Dark mode
+  static TextStyle black16W400 =
+  const TextStyle(fontSize: 16, fontWeight: FontWeight.w400);
+
+  static TextStyle blackShade18_16W600 =
+  const TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
+
 
   static TextStyle black12W600 = TextStyle(
       fontSize: 12.sp,

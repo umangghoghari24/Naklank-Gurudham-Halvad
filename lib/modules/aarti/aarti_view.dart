@@ -3,13 +3,17 @@ import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../../utils/color_constants.dart';
+import '../../widgets/app_drawer.dart';
 import 'aarti_controller.dart';
 
 class AartiView extends GetView<AartiController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer:  AppDrawer(),
       appBar: AppBar(
+        backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
               label: 'aarti'.tr,
           style: Styles.black18_14W400,)),
@@ -81,7 +85,7 @@ class AartiView extends GetView<AartiController> {
 
                 MyRegularText(
                   label: controller.ramdevAarti,
-                  maxLines: 1000,
+                  // maxLines: 1000,
                   align: TextAlign.justify,
                 ),
               ],

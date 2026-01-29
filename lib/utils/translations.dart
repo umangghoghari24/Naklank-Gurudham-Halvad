@@ -13,8 +13,14 @@ class AppTranslations extends Translations {
       'aarti': 'આરતી સમય',
       'gallery': 'ગેલેરી',
       'contact': 'સંપર્ક',
-      'satang': 'સત્સંગ',
+      'satsang': 'સત્સંગ',
       'bhajan': 'ભજન',
+      "home": "હોમ",
+      'settings': 'સેટિંગ્સ',
+      'dark_mode': 'ડાર્ક મોડ',
+      'language': 'ભાષા પસંદ કરો',
+      'store': 'સ્ટોર',
+
     },
 
     // Hindi
@@ -26,8 +32,13 @@ class AppTranslations extends Translations {
       'aarti': 'आरती समय',
       'gallery': 'गैलरी',
       'contact': 'संपर्क',
-      'satang': 'सत्संग',
+      'satsang': 'सत्संग',
       'bhajan': 'भजन',
+      "home": "होम",
+      'settings': 'सेटिंग्स',
+      'dark_mode': 'डार्क मोड',
+      'language': 'भाषा चुनें',
+      'store': 'स्टोर',
     },
 
     // English
@@ -39,9 +50,13 @@ class AppTranslations extends Translations {
       'aarti': 'Aarti Time',
       'gallery': 'Gallery',
       'contact': 'Contact',
-      'satang': 'Satsang',
+      'satsang': 'Satsang',
       'bhajan': 'Bhajan',
-
+      "home": "Home",
+      'settings': 'Settings',
+      'dark_mode': 'Dark Mode',
+      'language': 'Select Language',
+      'store': 'Store',
 
       // Aarti
       'ramdev_pir_aarti': 'રામદેવપીર આરતી',

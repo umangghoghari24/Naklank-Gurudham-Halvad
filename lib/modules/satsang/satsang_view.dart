@@ -4,15 +4,17 @@ import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/launcher.dart';
+import '../../widgets/app_drawer.dart';
 import 'satsang_controller.dart';
 
 class SatsangView extends GetView<SatsangController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       appBar: AppBar(
           title: MyRegularText(label: 'satang'.tr,
-          style: Styles.black18_14W400,)),
+          style: Styles.blackShade18_16W600,)),
       body: ListView.builder(
         padding: const EdgeInsets.all(12),
         itemCount: controller.links.length,

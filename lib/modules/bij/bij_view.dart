@@ -4,17 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/color_constants.dart';
 import '../../utils/styles.dart';
+import '../../widgets/app_drawer.dart';
 import 'bij_controller.dart';
 
 class BijView extends GetView<BijController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       appBar: AppBar(
         // backgroundColor: Colors.green,
         title: MyRegularText(
             label: 'bij'.tr,
-        style: Styles.black18_14W400,),
+        style: Styles.blackShade18_16W600,),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -47,8 +49,8 @@ class BijView extends GetView<BijController> {
                           label:  item['date']!,
                       align: TextAlign.start,
                       style: Styles.black16W400,),
-                      trailing: Text(
-                        item['month']!,
+                      trailing: MyRegularText(
+                        label: item['month']!,
                         style: Styles.black16W400,
                       ),
                     ),

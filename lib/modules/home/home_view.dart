@@ -1,11 +1,14 @@
 import 'package:calender/modules/satsang/satsang_view.dart';
 import 'package:calender/utils/color_constants.dart';
 import 'package:calender/utils/styles.dart';
+import 'package:calender/widgets/app_icon_image.dart';
 import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../../utils/assets_path.dart';
 import '../../utils/language_service.dart';
+import '../../widgets/app_drawer.dart';
 import '../aarti/aarti_binding.dart';
 import '../aarti/aarti_view.dart';
 import '../bij/bij_binding.dart';
@@ -17,6 +20,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       // backgroundColor: Colors.green,
       appBar: AppBar(
         // backgroundColor: Colors.orange,
@@ -40,30 +44,42 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: ListView(
+        child: Column(
           children: [
-            _menu(Icons.access_time, 'aarti'.tr, () {
-              Get.to(() => AartiView(), binding: AartiBinding());
-            }),
-             SizedBox(height: 8.h),
+            // IMAGE NON-SCROLL
+            _topBanner(),
+            SizedBox(height: 16.h),
 
-            _menu(Icons.celebration, 'bij'.tr, () {
-              Get.to(() => BijView(), binding: BijBinding());
-            }),
-             SizedBox(height: 8.h),
+            // ONLY CARDS SCROLL
+            Expanded(
+              child: ListView(
+                children: [
+                  _menu(Icons.access_time, 'aarti'.tr, () {
+                    Get.to(() => AartiView(), binding: AartiBinding());
+                  }),
+                  SizedBox(height: 8.h),
 
-            _menu(Icons.play_circle_fill, 'satang'.tr, () {
-              Get.to(() => SatsangView(), binding: SatsangBinding());
-            }),
-             SizedBox(height: 8.h),
+                  _menu(Icons.celebration, 'bij'.tr, () {
+                    Get.to(() => BijView(), binding: BijBinding());
+                  }),
+                  SizedBox(height: 8.h),
 
-            _menu(Icons.queue_music, 'bhajan'.tr, () {}),
-             SizedBox(height: 8.h),
+                  _menu(Icons.play_circle_fill, 'satsang'.tr, () {
+                    Get.to(() => SatsangView(), binding: SatsangBinding());
+                  }),
+                  SizedBox(height: 8.h),
 
-            _menu(Icons.photo_library, 'gallery'.tr ,() {}),
-             SizedBox(height: 8.h),
+                  _menu(Icons.queue_music, 'bhajan'.tr, () {}),
+                  SizedBox(height: 8.h),
 
-            _menu(Icons.history, 'history'.tr,() {}),
+                  _menu(Icons.photo_library, 'gallery'.tr, () {}),
+                  SizedBox(height: 8.h),
+                  _menu(Icons.photo_library, 'store'.tr, () {}),
+                  SizedBox(height: 8.h),
+                  _menu(Icons.history, 'history'.tr, () {}),
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -88,6 +104,15 @@ class HomeView extends GetView<HomeController> {
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
         onTap: onTap,
       ),
+    );
+  }
+  Widget _topBanner() {
+    return AppIconImage(
+      imagePath: AssetsPath.bannerTemple,
+      width: double.infinity,
+      height: 180.h,
+      fit: BoxFit.cover,
+      borderRadius: BorderRadius.circular(16), // 🟩 rounded banner
     );
   }
 
