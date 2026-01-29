@@ -1,4 +1,7 @@
+import 'package:calender/utils/styles.dart';
+import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'aarti_controller.dart';
 
@@ -6,7 +9,10 @@ class AartiView extends GetView<AartiController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('aarti'.tr)),
+      appBar: AppBar(
+          title: MyRegularText(
+              label: 'aarti'.tr,
+          style: Styles.black18_14W400,)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -17,18 +23,16 @@ class AartiView extends GetView<AartiController> {
             ...controller.aartiList.map((e) => Card(
               child: ListTile(
                 leading: const Icon(Icons.access_time),
-                title: Text(e['title']!),
-                trailing: Text(e['time']!),
+                title: MyRegularText(label:  e['title']!,
+                  align: TextAlign.start,
+                  style: Styles.black16W400,),
+                trailing: MyRegularText(label:  e['time']!),
                 onTap: () {
                   controller.onAartiTap(e['id']!);
                 },
               ),
             )),
-
-
-
-            const SizedBox(height: 20),
-
+             SizedBox(height: 15.h),
             // 🔹 Aarti text
             Obx(() => controller.showAarti.value
                 ? Column(
@@ -36,9 +40,9 @@ class AartiView extends GetView<AartiController> {
               children: [
                 Row(
                   children: [
-                    Text(
-                      controller.aartiTitle.tr,
-                      style: const TextStyle(
+                    MyRegularText(
+                      label: controller.aartiTitle.tr,
+                      style: TextStyle(
                         fontSize: 20,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
@@ -47,7 +51,7 @@ class AartiView extends GetView<AartiController> {
                   ],
                 ),
 
-                const SizedBox(height: 8),
+                SizedBox(height: 8.h),
 
                 // 🔊 TTS Controls
                 // Row(
@@ -73,16 +77,16 @@ class AartiView extends GetView<AartiController> {
                 //   ],
                 // ),
 
-                const SizedBox(height: 10),
+                // const SizedBox(height: 10),
 
-                Text(
-                  controller.ramdevAarti,
-                  style: const TextStyle(fontSize: 16, height: 1.6),
+                MyRegularText(
+                  label: controller.ramdevAarti,
+                  maxLines: 1000,
+                  align: TextAlign.justify,
                 ),
               ],
             )
                 : const SizedBox()),
-
           ],
         ),
       ),

@@ -1,3 +1,6 @@
+import 'package:calender/utils/color_constants.dart';
+import 'package:calender/utils/styles.dart';
+import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/launcher.dart';
@@ -7,7 +10,9 @@ class SatsangView extends GetView<SatsangController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('satang'.tr)),
+      appBar: AppBar(
+          title: MyRegularText(label: 'satang'.tr,
+          style: Styles.black18_14W400,)),
       body: ListView.builder(
         padding: const EdgeInsets.all(12),
         itemCount: controller.links.length,
@@ -18,14 +23,16 @@ class SatsangView extends GetView<SatsangController> {
               borderRadius: BorderRadius.circular(14),
             ),
             child: ListTile(
-              leading: const Icon(
+              leading: Icon(
                 Icons.play_circle_fill,
-                color: Colors.red,
-                size: 36,
+                color: ColorConstant.redColor,
+                size: 30,
               ),
-              title: Text('Dalsukh Bapu Stasang ${index + 1}'),
-              subtitle: const Text('Open in YouTube'),
-              trailing: const Icon(Icons.open_in_new),
+              title: MyRegularText(label: 'Dalsukh Bapu Stasang ${index + 1}',
+              align: TextAlign.start,
+              style: Styles.black16W400,),
+              // subtitle: MyRegularText(label: 'Open in YouTube'),
+              trailing: Icon(Icons.link),
               onTap: () {
                 openYoutube(controller.links[index]); // direct YT
               },
