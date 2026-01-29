@@ -24,7 +24,7 @@ class AppDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          // 🔝 Drawer Header
+          // Drawer Header
           DrawerHeader(
             decoration: BoxDecoration(
               color: ColorConstant.orangeColor,
@@ -68,7 +68,7 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
+            imagePath: AssetsPath.iconAarti,
             title: 'satsang'.tr,
             onTap: () {
               Get.to(
@@ -78,7 +78,7 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
+            imagePath: AssetsPath.iconBhajan,
             title: 'bhajan'.tr,
             onTap: () {
               // Get.to(
@@ -88,7 +88,7 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
+            imagePath: AssetsPath.iconGallery,
             title: 'gallery'.tr,
             onTap: () {
               // Get.to(
@@ -98,7 +98,7 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
+            imagePath: AssetsPath.iconHistory,
             title: 'history'.tr,
             onTap: () {
               // Get.to(
@@ -109,7 +109,7 @@ class AppDrawer extends StatelessWidget {
           ),
           // ⚙️ Settings menu
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
+            imagePath: AssetsPath.iconSettings,
             title: 'settings'.tr,
             onTap: () {
               Get.to(
