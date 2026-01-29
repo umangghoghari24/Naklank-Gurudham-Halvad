@@ -20,7 +20,7 @@ class AartiView extends GetView<AartiController> {
                 title: Text(e['title']!),
                 trailing: Text(e['time']!),
                 onTap: () {
-                  controller.onAartiTap(e['id']!); // 🔥 MUST
+                  controller.onAartiTap(e['id']!);
                 },
               ),
             )),
@@ -29,7 +29,7 @@ class AartiView extends GetView<AartiController> {
 
             const SizedBox(height: 20),
 
-            // 🔹 Aarti text (tap પછી દેખાશે)
+            // 🔹 Aarti text
             Obx(() => controller.showAarti.value
                 ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class AartiView extends GetView<AartiController> {
                 Row(
                   children: [
                     Text(
-                      controller.aartiTitle,
+                      controller.aartiTitle.tr,
                       style: const TextStyle(
                         fontSize: 20,
                         color: Colors.red,

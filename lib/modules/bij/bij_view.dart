@@ -23,18 +23,24 @@ class BijView extends GetView<BijController> {
                 color: Colors.red,
               ),
             ),
-
             const SizedBox(height: 12),
 
             Expanded(
               child: ListView.builder(
                 itemCount: controller.bijDates.length,
                 itemBuilder: (context, index) {
+                  final item = controller.bijDates[index];
+
                   return Card(
                     child: ListTile(
-                      // leading: const Icon(Icons.event),
-                      title: Text(controller.bijDates[index],
-                        textAlign: TextAlign.center),
+                      title: Text(item['date']!),
+                      trailing: Text(
+                        item['month']!,
+                        style: TextStyle(
+                          fontSize: 18,
+                          // color: Colors.grey.shade700,
+                        ),
+                      ),
                     ),
                   );
                 },

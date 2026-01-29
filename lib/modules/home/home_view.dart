@@ -13,7 +13,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.green,
       appBar: AppBar(
+        // backgroundColor: Colors.orange,
         title: Text('app_name'.tr),
         centerTitle: true,
         actions: [
@@ -32,66 +34,55 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: GridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 12,
-          crossAxisSpacing: 12,
+        child: ListView(
           children: [
             _menu(Icons.access_time, 'aarti'.tr, () {
               Get.to(() => AartiView(), binding: AartiBinding());
             }),
-            _menu(
-              Icons.celebration,
-              'bij'.tr,
-                  () {
-                Get.to(() => BijView(), binding: BijBinding());
-              },
-            ),
-            _menu(
-              Icons.play_circle_fill,
-              'satang'.tr,
-                  () {
-                Get.to(() => SatsangView(), binding: SatsangBinding());
-              },
-            ),
+            const SizedBox(height: 10),
+
+            _menu(Icons.celebration, 'bij'.tr, () {
+              Get.to(() => BijView(), binding: BijBinding());
+            }),
+            const SizedBox(height: 10),
+
+            _menu(Icons.play_circle_fill, 'satang'.tr, () {
+              Get.to(() => SatsangView(), binding: SatsangBinding());
+            }),
+            const SizedBox(height: 10),
 
             _menu(Icons.queue_music, 'bhajan'.tr, () {}),
-            _menu(Icons.photo_library, 'gallery'.tr, () {}),
-            _menu(Icons.history, 'history'.tr, () {}),
+            const SizedBox(height: 10),
+
+            _menu(Icons.photo_library, 'gallery'.tr ,() {}),
+            const SizedBox(height: 10),
+
+            _menu(Icons.history, 'history'.tr,() {}),
           ],
         ),
       ),
+
     );
   }
 
   Widget _menu(IconData icon, String title, VoidCallback onTap) {
     return Card(
-      color: Colors.grey.shade100,
-      elevation: 3, // 🔹 shadow depth
-      shadowColor: Colors.green.withOpacity(0.4), //  soft shade
+      // color: Colors.green.shade300,
+      elevation: 3,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14), //  border radius
+        borderRadius: BorderRadius.circular(14),
       ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(14), // ripple radius
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(icon, size: 36, color: Colors.orange),
-              const SizedBox(height: 10),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
+      child: ListTile(
+        leading: Icon(icon, color: Colors.orange, size: 30),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
           ),
         ),
+        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+        onTap: onTap,
       ),
     );
   }

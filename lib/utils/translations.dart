@@ -6,7 +6,7 @@ class AppTranslations extends Translations {
 
     // Gujarati
     'gu_IN': {
-      'app_name': 'નકલંક ગુરુધામ હળવદ',
+      'app_name': 'શ્રી નકલંક ગુરુધામ હળવદ',
       'history': 'ઈતિહાસ',
       "bij": 'બીજ',
       'bij_title': 'રામદેવપીર બીજ તારીખો',
@@ -19,7 +19,7 @@ class AppTranslations extends Translations {
 
     // Hindi
     'hi_IN': {
-      'app_name': 'नकलंक गुरुधाम हलवद',
+      'app_name': 'श्री नकलंक गुरुधाम हलवद',
       'history': 'इतिहास',
       "bij": 'बीज',
       'bij_title': 'रामदेवपीर बीज तिथियाँ',
@@ -32,7 +32,7 @@ class AppTranslations extends Translations {
 
     // English
     'en_US': {
-      'app_name': 'Naklank Gurudham Halvad',
+      'app_name': 'Shree Naklank Gurudham Halvad',
       'history': 'History',
       "bij": 'Bij',
       'bij_title': 'Ramdev Pir Bij Dates',

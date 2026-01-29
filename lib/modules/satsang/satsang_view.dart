@@ -23,11 +23,11 @@ class SatsangView extends GetView<SatsangController> {
                 color: Colors.red,
                 size: 36,
               ),
-              title: Text('Satsang ${index + 1}'),
+              title: Text('Dalsukh Bapu Stasang ${index + 1}'),
               subtitle: const Text('Open in YouTube'),
               trailing: const Icon(Icons.open_in_new),
               onTap: () {
-                openYoutube(controller.links[index]); // 🔥 direct YT
+                openYoutube(controller.links[index]); // direct YT
               },
             ),
           );

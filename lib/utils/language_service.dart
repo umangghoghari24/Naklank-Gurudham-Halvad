@@ -19,7 +19,7 @@ class LanguageService {
   }
 
   static Locale getInitialLocale() {
-    final code = _box.read(_key) ?? 'gu'; // default Gujarati
+    final code = _box.read(_key) ?? 'gu'; // Default Gujarati
 
     if (code == 'hi') return const Locale('hi', 'IN');
     if (code == 'en') return const Locale('en', 'US');

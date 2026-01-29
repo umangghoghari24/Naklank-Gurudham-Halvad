@@ -3,7 +3,7 @@ import '../../utils/string.dart';
 
 class BijController extends GetxController {
 
-  List<String> get bijDates {
+  List<Map<String, String>> get bijDates {
     final lang = Get.locale?.languageCode;
 
     if (lang == 'hi') return ramdevBijHi;
