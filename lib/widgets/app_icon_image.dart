@@ -26,14 +26,13 @@ class AppIconImage extends StatelessWidget {
       fit: fit,
     );
 
-    // 👉 if borderRadius provided, clip it
+    // if borderRadius provided, clip it
     if (borderRadius != null) {
       return ClipRRect(
         borderRadius: borderRadius!,
         child: image,
       );
     }
-
     return image;
   }
 }

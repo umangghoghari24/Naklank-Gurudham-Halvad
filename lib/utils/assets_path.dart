@@ -15,6 +15,7 @@ class AssetsPath {
   static const String iconSatsang = '$_images/satsang_icon2.jgp';
   static const String iconBhajan = '$_images/bhajan_icon.jpg';
   static const String iconGallery = '$_images/gallery_tem_icon.jpg';
+  static const String iconStore = '$_images/store_icon.jpg';
   static const String iconHistory = '$_images/history_icon.jpg';
   static const String iconSettings = '$_images/setting_icon.jpg';
 }

@@ -6,8 +6,10 @@ import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../../routes/app_routes.dart';
 import '../../utils/assets_path.dart';
 import '../../utils/language_service.dart';
+import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
 import '../aarti/aarti_binding.dart';
 import '../aarti/aarti_view.dart';
@@ -21,23 +23,22 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      // backgroundColor: Colors.green,
+      // backgroundColor: ColorConstant.greenColor,
       appBar: AppBar(
-        // backgroundColor: Colors.orange,
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
+        backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
-            label: 'app_name'.tr,
-        style: Styles.blackShade18_16W600,),
+            label: SC.app_name.tr,
+        style: Styles.white16W600,),
         centerTitle: true,
         actions: [
           PopupMenuButton<String>(
-            icon: const Icon(Icons.language),
-            onSelected: (value) {
-              LanguageService.changeLanguage(value);
-            },
+            icon: Icon(Icons.language),
+            onSelected: LanguageService.changeLanguage,
             itemBuilder: (_) => const [
-              PopupMenuItem(value: 'gu', child: MyRegularText(label: 'ગુજરાતી')),
-              PopupMenuItem(value: 'hi', child: MyRegularText(label: 'हिंदी')),
-              PopupMenuItem(value: 'en', child: MyRegularText(label: 'English')),
+              PopupMenuItem(value: 'gu', child: Text('ગુજરાતી')),
+              PopupMenuItem(value: 'hi', child: Text('हिंदी')),
+              PopupMenuItem(value: 'en', child: Text('English')),
             ],
           )
         ],
@@ -54,29 +55,28 @@ class HomeView extends GetView<HomeController> {
             Expanded(
               child: ListView(
                 children: [
-                  _menu(Icons.access_time, 'aarti'.tr, () {
-                    Get.to(() => AartiView(), binding: AartiBinding());
+                  _menu(AssetsPath.iconAarti, SC.aarti.tr, () {
+                    Get.toNamed(AppRoutes.aarti);
+                    // Get.to(() => AartiView(), binding: AartiBinding());
                   }),
-                  SizedBox(height: 8.h),
-
-                  _menu(Icons.celebration, 'bij'.tr, () {
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconBij, SC.bij.tr, () {
                     Get.to(() => BijView(), binding: BijBinding());
                   }),
-                  SizedBox(height: 8.h),
-
-                  _menu(Icons.play_circle_fill, 'satsang'.tr, () {
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconBhajan, SC.satsang.tr, () {
                     Get.to(() => SatsangView(), binding: SatsangBinding());
                   }),
-                  SizedBox(height: 8.h),
-
-                  _menu(Icons.queue_music, 'bhajan'.tr, () {}),
-                  SizedBox(height: 8.h),
-
-                  _menu(Icons.photo_library, 'gallery'.tr, () {}),
-                  SizedBox(height: 8.h),
-                  _menu(Icons.photo_library, 'store'.tr, () {}),
-                  SizedBox(height: 8.h),
-                  _menu(Icons.history, 'history'.tr, () {}),
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconBhajan, SC.bhajan.tr, () {}),
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconGallery, SC.gallery.tr, () {
+                    Get.toNamed(AppRoutes.gallery);
+                  }),
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconStore, SC.store.tr, () {}),
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconHistory, SC.history.tr, () {}),
                 ],
               ),
             ),
@@ -87,25 +87,36 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _menu(IconData icon, String title, VoidCallback onTap) {
+  Widget _menu(
+      String imagePath,
+      String title,
+      VoidCallback onTap,
+      ) {
     return Card(
       elevation: 3,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
       ),
       child: ListTile(
-        leading: Icon(icon,
-            color: ColorConstant.orangeColor, size: 30),
+        leading: ClipOval(
+          child: AppIconImage(
+            imagePath: imagePath,
+            width: 32.w,
+            height: 32.w,
+            fit: BoxFit.cover,
+          ),
+        ),
         title: MyRegularText(
           label: title,
           align: TextAlign.start,
-          style:  Styles.black16W400
+          style: Styles.black16W400,
         ),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
         onTap: onTap,
       ),
     );
   }
+
   Widget _topBanner() {
     return AppIconImage(
       imagePath: AssetsPath.bannerTemple,

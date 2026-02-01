@@ -1,14 +1,13 @@
-import 'package:calender/utils/color_constants.dart';
-import 'package:calender/utils/language_service.dart';
-import 'package:calender/utils/theme_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'routes/app_pages.dart';
+import 'routes/app_routes.dart';
 import 'utils/translations.dart';
-import 'modules/home/home_view.dart';
-import 'modules/home/home_binding.dart';
+import 'utils/language_service.dart';
+import 'utils/theme_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,26 +26,21 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
 
+          // 🌐 Language
           translations: AppTranslations(),
           locale: LanguageService.getInitialLocale(),
           fallbackLocale: const Locale('en', 'US'),
 
-          // 🔥 REQUIRED FOR DARK MODE
-          theme: ThemeData(
-            brightness: Brightness.light,
-          ),
-          darkTheme: ThemeData(
-            brightness: Brightness.dark,
-          ),
-
-          // 🔥 FIX HERE
+          // 🌙 Theme
+          theme: ThemeData(brightness: Brightness.light),
+          darkTheme: ThemeData(brightness: Brightness.dark),
           themeMode: ThemeService.themeMode,
 
-          initialBinding: HomeBinding(),
-          home: HomeView(),
+          // ✅ ROUTING (MOST IMPORTANT)
+          initialRoute: AppRoutes.splash,
+          getPages: AppPages.pages,
         );
       },
     );
-
   }
 }

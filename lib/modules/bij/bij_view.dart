@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/color_constants.dart';
+import '../../utils/string.dart';
 import '../../utils/styles.dart';
 import '../../widgets/app_drawer.dart';
 import 'bij_controller.dart';
@@ -13,9 +14,9 @@ class BijView extends GetView<BijController> {
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
-        // backgroundColor: Colors.green,
+        backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
-            label: 'bij'.tr,
+            label: SC.bij.tr,
         style: Styles.blackShade18_16W600,),
       ),
       body: Padding(
@@ -24,7 +25,7 @@ class BijView extends GetView<BijController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             MyRegularText(
-              label: 'bij_title'.tr,
+              label: SC.bij_title.tr,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

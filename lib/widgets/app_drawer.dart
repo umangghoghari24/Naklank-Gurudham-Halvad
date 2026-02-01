@@ -4,12 +4,15 @@ import 'package:get/get.dart';
 import '../modules/aarti/aarti_binding.dart';
 import '../modules/aarti/aarti_view.dart';
 import '../modules/bij/bij_binding.dart';
+import '../modules/gallery/gallery_binding.dart';
+import '../modules/gallery/gallery_view.dart';
 import '../modules/satsang/satsang_binding.dart';
 import '../modules/satsang/satsang_view.dart';
 import '../modules/settings/settings_binding.dart';
 import '../modules/settings/settings_view.dart';
 import '../utils/assets_path.dart';
 import '../utils/language_service.dart';
+import '../utils/string.dart';
 import '../widgets/my_regular_text.dart';
 import '../utils/color_constants.dart';
 import '../utils/styles.dart';
@@ -31,7 +34,7 @@ class AppDrawer extends StatelessWidget {
             ),
             child: Center(
               child: MyRegularText(
-                label: 'app_name'.tr,
+                label: SC.app_name.tr,
                 style: Styles.white18W600,
                 align: TextAlign.start,
               ),
@@ -40,15 +43,15 @@ class AppDrawer extends StatelessWidget {
 
           // 🏠 Home
           _drawerItem(
-            imagePath: 'assets/images/temple_demo.jpg',
-            title: 'home'.tr,
+            imagePath: AssetsPath.bannerTemple,
+            title: SC.home.tr,
             onTap: () {
               Get.offAll(() => HomeView());
             },
           ),
           _drawerItem(
             imagePath: AssetsPath.iconAarti,
-            title: 'aarti'.tr,
+            title: SC.aarti.tr,
             onTap: () {
               Get.to(
                     () => AartiView(),
@@ -59,7 +62,7 @@ class AppDrawer extends StatelessWidget {
           _drawerItem(
             imagePath: AssetsPath.iconBij,
 
-            title: 'bij'.tr,
+            title: SC.bij.tr,
             onTap: () {
               Get.to(
                     () => BijView(),
@@ -69,7 +72,7 @@ class AppDrawer extends StatelessWidget {
           ),
           _drawerItem(
             imagePath: AssetsPath.iconAarti,
-            title: 'satsang'.tr,
+            title: SC.satsang.tr,
             onTap: () {
               Get.to(
                     () => SatsangView(),
@@ -79,7 +82,7 @@ class AppDrawer extends StatelessWidget {
           ),
           _drawerItem(
             imagePath: AssetsPath.iconBhajan,
-            title: 'bhajan'.tr,
+            title: SC.bhajan.tr,
             onTap: () {
               // Get.to(
                 //     () => BijView(),
@@ -89,7 +92,17 @@ class AppDrawer extends StatelessWidget {
           ),
           _drawerItem(
             imagePath: AssetsPath.iconGallery,
-            title: 'gallery'.tr,
+            title: SC.gallery.tr,
+            onTap: () {
+              Get.to(
+                  () => GalleryView(),
+              binding: GalleryBinding(),
+              );
+            },
+          ),
+          _drawerItem(
+            imagePath: AssetsPath.iconStore,
+            title: SC.store.tr,
             onTap: () {
               // Get.to(
               //     () => BijView(),
@@ -99,7 +112,7 @@ class AppDrawer extends StatelessWidget {
           ),
           _drawerItem(
             imagePath: AssetsPath.iconHistory,
-            title: 'history'.tr,
+            title: SC.history.tr,
             onTap: () {
               // Get.to(
               //     () => BijView(),
@@ -110,7 +123,7 @@ class AppDrawer extends StatelessWidget {
           // ⚙️ Settings menu
           _drawerItem(
             imagePath: AssetsPath.iconSettings,
-            title: 'settings'.tr,
+            title: SC.settings.tr,
             onTap: () {
               Get.to(
                     () => SettingsView(),

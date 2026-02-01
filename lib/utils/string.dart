@@ -124,5 +124,19 @@ const List<Map<String, String>> ramdevBijEn = [
 ];
 
 class SC {
-  static const String customKey = 'Custom';
+  static const String app_name = 'app_name';
+
+  static const String home = 'home';
+  static const String store = 'store';
+  static const String aarti = 'aarti';
+  static const String bij = 'bij';
+  static const String bij_title = 'bij_title';
+  static const String satsang = 'satsang';
+  static const String bhajan = 'bhajan';
+  static const String gallery = 'gallery';
+  static const String history = 'history';
+  static const String settings = 'settings';
+  static const String language = 'language';
+  static const String dark_mode = 'dark_mode';
+
 }

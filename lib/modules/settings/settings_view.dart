@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../utils/color_constants.dart';
+import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
 import 'settings_controller.dart';
 import '../../widgets/my_regular_text.dart';
@@ -11,8 +13,9 @@ class SettingsView extends GetView<SettingsController> {
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
+        backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
-          label: 'settings'.tr,
+          label: SC.settings.tr,
           style: Styles.blackShade18_16W600,
         ),
       ),
@@ -20,10 +23,10 @@ class SettingsView extends GetView<SettingsController> {
         padding: const EdgeInsets.all(16),
         children: [
 
-          // 🌙 Dark Mode
+          // Dark Mode
           Obx(() => SwitchListTile(
             title: MyRegularText(
-              label: 'dark_mode'.tr,
+              label: SC.dark_mode.tr,
               style: Styles.black16W400,
             ),
             value: controller.isDarkMode.value,
@@ -32,9 +35,9 @@ class SettingsView extends GetView<SettingsController> {
 
           const Divider(),
 
-          // 🌐 Language
+          // Language
           MyRegularText(
-            label: 'language'.tr,
+            label: SC.language.tr,
             style: Styles.blackShade18_16W600,
           ),
           const SizedBox(height: 8),

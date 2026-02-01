@@ -4,6 +4,7 @@ import 'package:calender/widgets/my_regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/launcher.dart';
+import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
 import 'satsang_controller.dart';
 
@@ -13,7 +14,9 @@ class SatsangView extends GetView<SatsangController> {
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
-          title: MyRegularText(label: 'satang'.tr,
+          backgroundColor: ColorConstant.orangeColor,
+          title: MyRegularText(
+            label: SC.satsang.tr,
           style: Styles.blackShade18_16W600,)),
       body: ListView.builder(
         padding: const EdgeInsets.all(12),

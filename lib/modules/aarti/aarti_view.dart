@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/color_constants.dart';
+import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
 import 'aarti_controller.dart';
 
@@ -13,17 +14,18 @@ class AartiView extends GetView<AartiController> {
     return Scaffold(
       drawer:  AppDrawer(),
       appBar: AppBar(
+          iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
-              label: 'aarti'.tr,
-          style: Styles.black18_14W400,)),
+              label: SC.aarti.tr,
+          style: Styles.white18_14W400,)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            // 🔹 Morning / Evening cards
+            // Morning / Evening cards
             ...controller.aartiList.map((e) => Card(
               child: ListTile(
                 leading: const Icon(Icons.access_time),
@@ -37,7 +39,7 @@ class AartiView extends GetView<AartiController> {
               ),
             )),
              SizedBox(height: 15.h),
-            // 🔹 Aarti text
+            // Aarti text
             Obx(() => controller.showAarti.value
                 ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
