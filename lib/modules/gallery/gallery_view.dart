@@ -14,7 +14,6 @@ class GalleryView extends GetView<GalleryController> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      backgroundColor: Colors.white,
       appBar: AppBar(title: MyRegularText(
           label: SC.gallery.tr,
       style: Styles.blackShade18_16W600,)),
