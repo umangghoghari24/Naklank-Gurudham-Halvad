@@ -139,4 +139,11 @@ class SC {
   static const String language = 'language';
   static const String dark_mode = 'dark_mode';
 
+  ///  Abhishek Screen
+  static const String water = 'water';
+  static const String milk = 'milk';
+  static const String start_abhishek = 'start_abhishek';
+  static const String abhishek_running = 'abhishek_running';
+  static const String abhishek_darshan = 'abhishek_darshan';
+
 }

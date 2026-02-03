@@ -20,6 +20,11 @@ class AppTranslations extends Translations {
       'dark_mode': 'ડાર્ક મોડ',
       'language': 'ભાષા પસંદ કરો',
       'store': 'સ્ટોર',
+      'water': 'પાણી',
+      'milk': 'દૂધ',
+      'start_abhishek': 'અભિષેક શરૂ કરો',
+      'abhishek_running': 'અભિષેક ચાલુ છે...',
+      'abhishek_darshan': 'અભિષેક દર્શન',
 
     },
 
@@ -39,6 +44,12 @@ class AppTranslations extends Translations {
       'dark_mode': 'डार्क मोड',
       'language': 'भाषा चुनें',
       'store': 'स्टोर',
+      'water': 'जल',
+      'milk': 'दूध',
+      'start_abhishek': 'अभिषेक शुरू करें',
+      'abhishek_running': 'अभिषेक चल रहा है...',
+      'abhishek_darshan': 'अभिषेक दर्शन',
+
     },
 
     // English
@@ -57,6 +68,13 @@ class AppTranslations extends Translations {
       'dark_mode': 'Dark Mode',
       'language': 'Select Language',
       'store': 'Store',
+      'water': 'Water',
+      'milk': 'Milk',
+      'start_abhishek': 'Start Abhishek',
+      'abhishek_running': 'Abhishek Running...',
+      'abhishek_darshan': 'Abhishek Darshan',
+
+
 
       // Aarti
       'ramdev_pir_aarti': 'રામદેવપીર આરતી',

@@ -1,3 +1,4 @@
+import 'package:calender/modules/abhishek/abhishek_view.dart';
 import 'package:calender/modules/satsang/satsang_view.dart';
 import 'package:calender/utils/color_constants.dart';
 import 'package:calender/utils/styles.dart';
@@ -13,6 +14,7 @@ import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
 import '../aarti/aarti_binding.dart';
 import '../aarti/aarti_view.dart';
+import '../abhishek/abhishek_binding.dart';
 import '../bij/bij_binding.dart';
 import '../bij/bij_view.dart';
 import '../satsang/satsang_binding.dart';
@@ -62,6 +64,10 @@ class HomeView extends GetView<HomeController> {
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconBij, SC.bij.tr, () {
                     Get.to(() => BijView(), binding: BijBinding());
+                  }),
+                  SizedBox(height: 5.h),
+                  _menu(AssetsPath.shivling, SC.abhishek_darshan.tr, () {
+                    Get.to(() => AbhishekView(), binding: AbhishekBinding());
                   }),
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconBhajan, SC.satsang.tr, () {

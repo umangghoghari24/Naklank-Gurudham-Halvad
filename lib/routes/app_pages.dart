@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import '../modules/abhishek/abhishek_binding.dart';
+import '../modules/abhishek/abhishek_view.dart';
 import '../modules/gallery/gallery_binding.dart';
 import '../modules/gallery/gallery_view.dart';
 import '../modules/splash/splash_view.dart';
@@ -29,6 +31,11 @@ class AppPages {
       name: AppRoutes.aarti,
       page: () => AartiView(),
       binding: AartiBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.abhishek,
+      page: () =>  AbhishekView(),
+      binding: AbhishekBinding(),
     ),
     GetPage(
       name: AppRoutes.bij,

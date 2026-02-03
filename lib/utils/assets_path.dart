@@ -7,6 +7,7 @@ class AssetsPath {
   //  Common images
   static const String templeDemo = '$_images/temple_demo.jpg';
   static const String bannerTemple = '$_images/banner_tem.jpeg';
+  static const String shivling = '$_images/shivling.jpg';
 
   //  Drawer icons
   static const String iconHome = '$_images/icon_home.jpg';

@@ -1,8 +1,10 @@
+import 'package:calender/modules/abhishek/abhishek_view.dart';
 import 'package:calender/modules/bij/bij_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../modules/aarti/aarti_binding.dart';
 import '../modules/aarti/aarti_view.dart';
+import '../modules/abhishek/abhishek_binding.dart';
 import '../modules/bij/bij_binding.dart';
 import '../modules/gallery/gallery_binding.dart';
 import '../modules/gallery/gallery_view.dart';
@@ -61,12 +63,21 @@ class AppDrawer extends StatelessWidget {
           ),
           _drawerItem(
             imagePath: AssetsPath.iconBij,
-
             title: SC.bij.tr,
             onTap: () {
               Get.to(
                     () => BijView(),
                 binding: BijBinding(),
+              );
+            },
+          ),
+          _drawerItem(
+            imagePath: AssetsPath.shivling,
+            title: SC.abhishek_darshan.tr,
+            onTap: () {
+              Get.to(
+                    () => AbhishekView(),
+                binding: AbhishekBinding(),
               );
             },
           ),
