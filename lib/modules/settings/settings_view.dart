@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/color_constants.dart';
 import '../../utils/string.dart';
@@ -40,7 +41,7 @@ class SettingsView extends GetView<SettingsController> {
             label: SC.language.tr,
             style: Styles.blackShade18_16W600,
           ),
-          const SizedBox(height: 8),
+           SizedBox(height: 8.h),
           _langTile('gu', 'ગુજરાતી'),
           _langTile('hi', 'हिंदी'),
           _langTile('en', 'English'),
