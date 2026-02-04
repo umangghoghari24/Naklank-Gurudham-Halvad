@@ -8,6 +8,7 @@ import '../../utils/styles.dart';
 import '../../widgets/app_drawer.dart';
 import 'gallery_controller.dart';
 import 'gallery_detail_view.dart';
+import 'gallery_model/gallery_data_model.dart';
 
 class GalleryView extends GetView<GalleryController> {
   @override
@@ -26,18 +27,41 @@ class GalleryView extends GetView<GalleryController> {
           mainAxisSpacing: 8,
         ),
         itemBuilder: (_, index) {
-          final photo = controller.photos[index];
+          final GalleryPhoto photo = controller.photos[index];
+
           return GestureDetector(
             onTap: () {
               Get.to(() => GalleryDetailView(photo: photo));
             },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(photo.image,
-                  fit: BoxFit.cover),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                /// 🖼 Image
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      photo.image,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 6),
+
+                /// 🏷 Title
+                MyRegularText(
+                  label: photo.name, // 👈 title here
+                  style: Styles.black14W500,
+                  align: TextAlign.center,
+                  maxLines: 1,
+
+                ),
+              ],
             ),
           );
         },
+
       ),
     );
   }

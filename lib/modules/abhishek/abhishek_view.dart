@@ -126,19 +126,17 @@ class AbhishekView extends StatelessWidget {
                   : controller.startAbhishek,
               style: ElevatedButton.styleFrom(
                 backgroundColor: ColorConstant.greenColor,
-                padding:
-                EdgeInsets.symmetric(
+                padding: EdgeInsets.symmetric(
                     horizontal: Get.width / 3.5,
                     vertical: 14),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(11),
                 ),
               ),
               child: MyRegularText(
                   label: controller.isAbhishekRunning.value
                       ? SC.abhishek_running.tr
                       : SC.start_abhishek.tr,
-
                   style: Styles.white16W600
               ),
             );
@@ -163,7 +161,7 @@ class AbhishekView extends StatelessWidget {
           color: isSelected
               ? ColorConstant.orangeColor
               : ColorConstant.greyDark,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(11),
           border: Border.all(
             color: ColorConstant.greenColor,
             width: 1.5

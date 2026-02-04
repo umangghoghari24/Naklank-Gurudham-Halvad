@@ -32,7 +32,7 @@ class AbhishekController extends GetxController
     isAbhishekRunning.value = true;
     animationController.repeat();
 
-    await Future.delayed(const Duration(seconds: 15));
+    await Future.delayed(const Duration(seconds: 3));
 
     animationController.stop();
     animationController.reset();

@@ -8,61 +8,84 @@ class GalleryController extends GetxController {
       image: AssetsPath.bannerTemple,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+      name: "Ramdev Pir Mandir"
     ),
     GalleryPhoto(
       image: AssetsPath.iconAarti,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconStore,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconHistory,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconGallery,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconAarti,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.bannerTemple,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconAarti,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.bannerTemple,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconAarti,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.bannerTemple,
       title: 'Ramdev Pir Mandir',
       description: 'Shree Naklank Gurudham, Halvad',
+        name: "Ramdev Pir Mandir"
+
     ),
     GalleryPhoto(
       image: AssetsPath.iconAarti,
       title: 'Aarti Time',
       description: 'Morning Aarti View',
+        name: "Ramdev Pir Mandir"
+
     ),
   ];
 }
