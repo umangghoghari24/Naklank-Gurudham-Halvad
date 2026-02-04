@@ -27,124 +27,124 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: [
-          // Drawer Header
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: ColorConstant.orangeColor,
-            ),
-            child: Center(
-              child: MyRegularText(
-                label: SC.app_name.tr,
-                style: Styles.white18W600,
-                align: TextAlign.start,
+      child: ListView(
+        padding: EdgeInsets.zero,
+          children: [
+            // Drawer Header
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: ColorConstant.orangeColor,
+              ),
+              child: Center(
+                child: MyRegularText(
+                  label: SC.app_name.tr,
+                  style: Styles.white18W600,
+                  align: TextAlign.start,
+                ),
               ),
             ),
-          ),
-
-          // 🏠 Home
-          _drawerItem(
-            imagePath: AssetsPath.bannerTemple,
-            title: SC.home.tr,
-            onTap: () {
-              Get.offAll(() => HomeView());
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconAarti,
-            title: SC.aarti.tr,
-            onTap: () {
-              Get.to(
-                    () => AartiView(),
-                binding: AartiBinding(),
-              );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconBij,
-            title: SC.bij.tr,
-            onTap: () {
-              Get.to(
-                    () => BijView(),
-                binding: BijBinding(),
-              );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.shivling,
-            title: SC.abhishek_darshan.tr,
-            onTap: () {
-              Get.to(
-                    () => AbhishekView(),
-                binding: AbhishekBinding(),
-              );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconAarti,
-            title: SC.satsang.tr,
-            onTap: () {
-              Get.to(
-                    () => SatsangView(),
-                binding: SatsangBinding(),
-              );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconBhajan,
-            title: SC.bhajan.tr,
-            onTap: () {
-              // Get.to(
+        
+            // 🏠 Home
+            _drawerItem(
+              imagePath: AssetsPath.bannerTemple,
+              title: SC.home.tr,
+              onTap: () {
+                Get.offAll(() => HomeView());
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconAarti,
+              title: SC.aarti.tr,
+              onTap: () {
+                Get.to(
+                      () => AartiView(),
+                  binding: AartiBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconBij,
+              title: SC.bij.tr,
+              onTap: () {
+                Get.to(
+                      () => BijView(),
+                  binding: BijBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.shivling,
+              title: SC.abhishek_darshan.tr,
+              onTap: () {
+                Get.to(
+                      () => AbhishekView(),
+                  binding: AbhishekBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconAarti,
+              title: SC.satsang.tr,
+              onTap: () {
+                Get.to(
+                      () => SatsangView(),
+                  binding: SatsangBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconBhajan,
+              title: SC.bhajan.tr,
+              onTap: () {
+                // Get.to(
+                  //     () => BijView(),
+                  // binding: BijBinding(),
+                // );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconGallery,
+              title: SC.gallery.tr,
+              onTap: () {
+                Get.to(
+                    () => GalleryView(),
+                binding: GalleryBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconStore,
+              title: SC.store.tr,
+              onTap: () {
+                // Get.to(
                 //     () => BijView(),
                 // binding: BijBinding(),
-              // );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconGallery,
-            title: SC.gallery.tr,
-            onTap: () {
-              Get.to(
-                  () => GalleryView(),
-              binding: GalleryBinding(),
-              );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconStore,
-            title: SC.store.tr,
-            onTap: () {
-              // Get.to(
-              //     () => BijView(),
-              // binding: BijBinding(),
-              // );
-            },
-          ),
-          _drawerItem(
-            imagePath: AssetsPath.iconHistory,
-            title: SC.history.tr,
-            onTap: () {
-              // Get.to(
-              //     () => BijView(),
-              // binding: BijBinding(),
-              // );
-            },
-          ),
-          // ⚙️ Settings menu
-          _drawerItem(
-            imagePath: AssetsPath.iconSettings,
-            title: SC.settings.tr,
-            onTap: () {
-              Get.to(
-                    () => SettingsView(),
-                binding: SettingsBinding(),
-              );
-            },
-          ),
-
-        ],
-      ),
+                // );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconHistory,
+              title: SC.history.tr,
+              onTap: () {
+                // Get.to(
+                //     () => BijView(),
+                // binding: BijBinding(),
+                // );
+              },
+            ),
+            // ⚙️ Settings menu
+            _drawerItem(
+              imagePath: AssetsPath.iconSettings,
+              title: SC.settings.tr,
+              onTap: () {
+                Get.to(
+                      () => SettingsView(),
+                  binding: SettingsBinding(),
+                );
+              },
+            ),
+          ],
+        ),
     );
   }
 
