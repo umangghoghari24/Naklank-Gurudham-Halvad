@@ -156,7 +156,7 @@ class AbhishekView extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding:
-         EdgeInsets.symmetric(horizontal: Get.width / 7, vertical: 12),
+         EdgeInsets.symmetric(horizontal: Get.width / 6, vertical: 12),
         decoration: BoxDecoration(
           color: isSelected
               ? ColorConstant.orangeColor

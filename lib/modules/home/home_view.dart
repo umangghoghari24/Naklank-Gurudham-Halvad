@@ -100,8 +100,9 @@ class HomeView extends GetView<HomeController> {
       ) {
     return Card(
       elevation: 3,
+        shadowColor: ColorConstant.greyBorderColor,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(11),
       ),
       child: ListTile(
         leading: ClipOval(

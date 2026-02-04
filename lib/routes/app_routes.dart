@@ -1,5 +1,5 @@
 abstract class AppRoutes {
-  static const splash = '/splash';
+  static const splash = '/';
   static const home = '/home';
   static const aarti = '/aarti';
   static const bij = '/bij';

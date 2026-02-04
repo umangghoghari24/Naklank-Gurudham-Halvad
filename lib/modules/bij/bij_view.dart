@@ -41,9 +41,10 @@ class BijView extends GetView<BijController> {
 
                   return Card(
                     // color: ColorConstant.sendGreen,
-                    elevation: 2,
+                    elevation: 3,
+                    shadowColor: ColorConstant.greyBorderColor,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(11),
                     ),
                     child: ListTile(
                       title: MyRegularText(
