@@ -40,7 +40,7 @@ class SatsangView extends GetView<SatsangController> {
                     Icon(
                       Icons.search,
                       color: ColorConstant.orangeColor,
-                      size: 40,
+                      size: 30,
                     ),
                     SizedBox(width: 12.w),
                     Expanded(
@@ -59,7 +59,8 @@ class SatsangView extends GetView<SatsangController> {
                         ],
                       ),
                     ),
-                    Icon(Icons.notifications_active_outlined,),
+                    Icon(Icons.notifications_active_outlined,
+                      color: ColorConstant.orangeColor,),
                   ],
                 ),
               ),
@@ -70,6 +71,7 @@ class SatsangView extends GetView<SatsangController> {
             color: ColorConstant.orangeColor,
             endIndent: 15,indent: 15,),
           Card(
+            color: ColorConstant.sendGreen,
             margin: const EdgeInsets.all(12),
             elevation: 3,
             shape: RoundedRectangleBorder(
@@ -124,7 +126,24 @@ class SatsangView extends GetView<SatsangController> {
                       align: TextAlign.start,
                       style: Styles.black16W400,
                     ),
-                    trailing: Icon(Icons.link),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // WHATSAPP SHARE
+                        // IconButton(
+                        //   icon:  Icon(Icons.phone),
+                        //   color: Colors.green,
+                        //   onPressed: () {
+                        //     // Share.share(
+                        //     //   "${controller.satsangList[index].title}\n${controller.satsangList[index].url}",
+                        //     // );
+                        //   },
+                        // ),
+                        Icon(Icons.link,
+                          color: ColorConstant.orangeColor,),
+                      ],
+                    ),
+
                     onTap: () {
                       openYoutube(controller.satsangList[index].url);
                     },

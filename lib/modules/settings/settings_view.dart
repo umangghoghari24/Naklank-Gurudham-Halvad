@@ -23,8 +23,11 @@ class SettingsView extends GetView<SettingsController> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-
-          // Dark Mode
+          MyRegularText(
+            label: SC.theme_mode.tr,
+            style: Styles.blackShade18_16W600,
+          ),
+          // SizedBox(height: 5.h),
           Obx(() => SwitchListTile(
             title: MyRegularText(
               label: SC.dark_mode.tr,
@@ -41,10 +44,13 @@ class SettingsView extends GetView<SettingsController> {
             label: SC.language.tr,
             style: Styles.blackShade18_16W600,
           ),
-           SizedBox(height: 8.h),
+           // SizedBox(height: 5.h),
           _langTile('gu', 'ગુજરાતી'),
           _langTile('hi', 'हिंदी'),
           _langTile('en', 'English'),
+
+          const Divider(),
+
         ],
       ),
     );

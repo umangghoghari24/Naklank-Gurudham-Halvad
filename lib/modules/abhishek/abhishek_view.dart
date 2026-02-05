@@ -37,18 +37,14 @@ class AbhishekView extends StatelessWidget {
             );
           }),
         ],
-
       ),
       body: Column(
         children: [
-          /// 🛕 Shivling Image + Animation
           Expanded(
             child: Obx(() {
               return Stack(
                 alignment: Alignment.center,
                 children: [
-
-                  /// 🔱 Shivling (always visible & lower)
                   Positioned(
                     bottom: 0,
                     child: AppIconImage(
@@ -58,10 +54,7 @@ class AbhishekView extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-
-                  /// 🪔 Banner + Jarna (only after start)
                   if (controller.isAbhishekRunning.value) ...[
-                    /// Banner Image (TOP)
                     Positioned(
                       top: 0,
                       child: AppIconImage(
@@ -71,7 +64,6 @@ class AbhishekView extends StatelessWidget {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    /// 💧 Jarna (from banner bottom)
                     Positioned(
                       top: 120.h,
                       child: AnimatedBuilder(
@@ -94,8 +86,6 @@ class AbhishekView extends StatelessWidget {
             }),
           ),
            SizedBox(height: 20.h),
-
-          /// 🔘 Abhishek Type Selection
           Obx(() {
             return Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -118,7 +108,6 @@ class AbhishekView extends StatelessWidget {
             );
           }),
           SizedBox(height: 25.h),
-          /// 🙏 Start Button
           Obx(() {
             return ElevatedButton(
               onPressed: controller.isAbhishekRunning.value
@@ -155,8 +144,7 @@ class AbhishekView extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding:
-         EdgeInsets.symmetric(horizontal: Get.width / 6, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: Get.width / 6, vertical: 12),
         decoration: BoxDecoration(
           color: isSelected
               ? ColorConstant.orangeColor

@@ -19,4 +19,10 @@ class AssetsPath {
   static const String iconStore = '$_images/store_icon.jpg';
   static const String iconHistory = '$_images/history_icon.jpg';
   static const String iconSettings = '$_images/setting_icon.jpg';
+
+
+  // ---------------- Sounds folder ----------------
+  static const String _sounds = 'assets/sounds';
+
+  static const String omNamahShivay = '$_sounds/om_namah_shivay.mp3';
 }

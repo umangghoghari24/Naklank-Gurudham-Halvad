@@ -12,8 +12,6 @@ import '../../utils/assets_path.dart';
 import '../../utils/language_service.dart';
 import '../../utils/string.dart';
 import '../../widgets/app_drawer.dart';
-import '../aarti/aarti_binding.dart';
-import '../aarti/aarti_view.dart';
 import '../abhishek/abhishek_binding.dart';
 import '../bij/bij_binding.dart';
 import '../bij/bij_view.dart';
@@ -37,10 +35,10 @@ class HomeView extends GetView<HomeController> {
           PopupMenuButton<String>(
             icon: Icon(Icons.language),
             onSelected: LanguageService.changeLanguage,
-            itemBuilder: (_) => const [
-              PopupMenuItem(value: 'gu', child: Text('ગુજરાતી')),
-              PopupMenuItem(value: 'hi', child: Text('हिंदी')),
-              PopupMenuItem(value: 'en', child: Text('English')),
+            itemBuilder: (_) =>  [
+              PopupMenuItem(value: 'gu', child: MyRegularText(label: 'ગુજરાતી')),
+              PopupMenuItem(value: 'hi', child: MyRegularText(label: 'हिंदी')),
+              PopupMenuItem(value: 'en', child: MyRegularText(label: 'English')),
             ],
           )
         ],
@@ -80,6 +78,9 @@ class HomeView extends GetView<HomeController> {
                     Get.toNamed(AppRoutes.gallery);
                   }),
                   SizedBox(height: 5.h),
+                  _menu(AssetsPath.iconGallery, 'Donation', () {
+                    Get.toNamed(AppRoutes.donation);
+                  }),
                   _menu(AssetsPath.iconStore, SC.store.tr, () {}),
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconHistory, SC.history.tr, () {}),

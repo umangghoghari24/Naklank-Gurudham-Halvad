@@ -8,7 +8,6 @@ class AartiController extends GetxController {
   final isEvening = false.obs;
   final isSpeaking = false.obs;
 
-  // Aarti list
   List<Map<String, String>> get aartiList {
     final lang = Get.locale?.languageCode;
 
@@ -24,18 +23,15 @@ class AartiController extends GetxController {
     ];
   }
 
-  // Tap handler
   Future<void> onAartiTap(String id) async {
     showAarti.value = true;
     isEvening.value = (id == 'evening');
     // await stop();
   }
 
-  // 🔹 Title
   String get aartiTitle =>
       isEvening.value ? 'સાંજની આરતી' : 'સવારની આરતી';
 
-  // 🔹 Text
   String get ramdevAarti {
     final lang = Get.locale?.languageCode;
 

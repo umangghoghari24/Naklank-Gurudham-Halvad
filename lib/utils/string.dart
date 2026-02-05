@@ -138,6 +138,7 @@ class SC {
   static const String settings = 'settings';
   static const String language = 'language';
   static const String dark_mode = 'dark_mode';
+  static const String theme_mode = 'theme_mode';
 
   ///  Abhishek Screen
   static const String water = 'water';

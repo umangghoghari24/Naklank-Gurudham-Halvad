@@ -43,6 +43,7 @@ dependencies:
   intl: ^0.20.2
   change_app_package_name: ^1.5.0
   dropdown_button2: ^2.3.9
+  audioplayers: ^6.5.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
   assets:
     - assets/images/
     - assets/gif/
+    - assets/sounds/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

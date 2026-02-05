@@ -24,8 +24,6 @@ class AartiView extends GetView<AartiController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // Morning / Evening cards
             ...controller.aartiList.map((e) => Card(
               child: ListTile(
                 leading: const Icon(Icons.access_time),
@@ -39,7 +37,6 @@ class AartiView extends GetView<AartiController> {
               ),
             )),
              SizedBox(height: 15.h),
-            // Aarti text
             Obx(() => controller.showAarti.value
                 ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,9 +53,7 @@ class AartiView extends GetView<AartiController> {
                     ),
                   ],
                 ),
-
                 SizedBox(height: 8.h),
-
                 // 🔊 TTS Controls
                 // Row(
                 //   children: [
@@ -84,15 +79,13 @@ class AartiView extends GetView<AartiController> {
                 // ),
 
                 // const SizedBox(height: 10),
-
                 MyRegularText(
                   label: controller.ramdevAarti,
                   // maxLines: 1000,
                   align: TextAlign.justify,
                 ),
               ],
-            )
-                : const SizedBox()),
+            ) : const SizedBox()),
           ],
         ),
       ),

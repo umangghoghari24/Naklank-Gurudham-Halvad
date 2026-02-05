@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import '../modules/abhishek/abhishek_binding.dart';
 import '../modules/abhishek/abhishek_view.dart';
+import '../modules/donation/donation_binding.dart';
+import '../modules/donation/donation_view.dart';
 import '../modules/gallery/gallery_binding.dart';
 import '../modules/gallery/gallery_view.dart';
 import '../modules/splash/splash_view.dart';
@@ -52,5 +54,11 @@ class AppPages {
       page: () => GalleryView(),
       binding: GalleryBinding(),
     ),
+    GetPage(
+      name: AppRoutes.donation,
+      page: () => DonationViewScreen(),
+      binding: DonationBinding(),
+    ),
+
   ];
 }

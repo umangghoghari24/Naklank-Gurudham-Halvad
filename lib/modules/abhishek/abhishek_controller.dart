@@ -1,15 +1,22 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+import '../../utils/assets_path.dart';
 
 enum AbhishekType { water, milk }
 
 class AbhishekController extends GetxController
     with GetSingleTickerProviderStateMixin {
+
   var selectedType = AbhishekType.water.obs;
   var isAbhishekRunning = false.obs;
 
   late AnimationController animationController;
   late Animation<double> progress;
+
+  // 🔊 Sound
+  final AudioPlayer _player = AudioPlayer();
+  var isSoundOn = true.obs;
 
   @override
   void onInit() {
@@ -24,11 +31,32 @@ class AbhishekController extends GetxController
         .animate(animationController);
   }
 
+  // ---------------- Sound Methods ----------------
+
+  Future<void> playStarSound() async {
+    if (!isSoundOn.value) return;
+
+    await _player.play(
+      AssetSource(
+        AssetsPath.omNamahShivay.replaceFirst("assets/", ""),
+      ),
+    );
+  }
+
+  void toggleSound() {
+    isSoundOn.value = !isSoundOn.value;
+  }
+
+  // ---------------- Actions ----------------
+
   void selectType(AbhishekType type) {
     selectedType.value = type;
+    playStarSound(); // 🔊 when selecting type
   }
 
   void startAbhishek() async {
+    playStarSound(); // 🔊 when start pressed
+
     isAbhishekRunning.value = true;
     animationController.repeat();
 
@@ -37,18 +65,12 @@ class AbhishekController extends GetxController
     animationController.stop();
     animationController.reset();
     isAbhishekRunning.value = false;
-
-  }
-
-  var isSoundOn = true.obs;
-
-  void toggleSound() {
-    isSoundOn.value = !isSoundOn.value;
   }
 
   @override
   void onClose() {
     animationController.dispose();
+    _player.dispose();
     super.onClose();
   }
 }

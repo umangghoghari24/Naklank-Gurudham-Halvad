@@ -1,6 +1,7 @@
 import 'package:calender/modules/abhishek/abhishek_view.dart';
 import 'package:calender/modules/bij/bij_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../modules/aarti/aarti_binding.dart';
 import '../modules/aarti/aarti_view.dart';
@@ -27,24 +28,36 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      width: 290.w,
       child: ListView(
         padding: EdgeInsets.zero,
           children: [
-            // Drawer Header
             DrawerHeader(
               decoration: BoxDecoration(
                 color: ColorConstant.orangeColor,
               ),
-              child: Center(
-                child: MyRegularText(
-                  label: SC.app_name.tr,
-                  style: Styles.white18W600,
-                  align: TextAlign.start,
-                ),
+
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(11),
+                    child: AppIconImage(
+                      imagePath: AssetsPath.bannerTemple,
+                      width: 150.w,
+                      height: 80.w,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  MyRegularText(
+                    label: SC.app_name.tr,
+                    style: Styles.white18W600,
+                    align: TextAlign.start,
+                    maxLines: 2,
+                  ),
+                ],
               ),
             ),
-        
-            // 🏠 Home
             _drawerItem(
               imagePath: AssetsPath.bannerTemple,
               title: SC.home.tr,
@@ -132,7 +145,6 @@ class AppDrawer extends StatelessWidget {
                 // );
               },
             ),
-            // ⚙️ Settings menu
             _drawerItem(
               imagePath: AssetsPath.iconSettings,
               title: SC.settings.tr,
@@ -148,7 +160,6 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  // Drawer normal item
   Widget _drawerItem({
     required String imagePath,
     required String title,
@@ -171,14 +182,12 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-
-  // Language item
   Widget _langItem(String code, String label) {
     return ListTile(
       title: MyRegularText(label: label),
       onTap: () {
         LanguageService.changeLanguage(code);
-        Get.back(); // close drawer
+        Get.back();
       },
     );
   }

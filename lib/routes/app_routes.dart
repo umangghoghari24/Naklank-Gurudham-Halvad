@@ -7,4 +7,5 @@ abstract class AppRoutes {
   static const satsang = '/satsang';
   static const settings = '/settings';
   static const gallery = '/gallery';
+  static const donation = '/donation';
 }
