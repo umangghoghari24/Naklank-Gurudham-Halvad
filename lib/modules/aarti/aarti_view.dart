@@ -26,7 +26,7 @@ class AartiView extends GetView<AartiController> {
           children: [
             ...controller.aartiList.map((e) => Card(
               child: ListTile(
-                leading: const Icon(Icons.access_time),
+                leading: const Icon(Icons.watch_later),
                 title: MyRegularText(label:  e['title']!,
                   align: TextAlign.start,
                   style: Styles.black16W400,),
@@ -47,41 +47,15 @@ class AartiView extends GetView<AartiController> {
                       label: controller.aartiTitle.tr,
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.red,
+                        color: ColorConstant.redColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 8.h),
-                // 🔊 TTS Controls
-                // Row(
-                //   children: [
-                //     IconButton(
-                //       iconSize: 40,
-                //       icon: Icon(
-                //         controller.isSpeaking.value
-                //             ? Icons.stop_circle
-                //             : Icons.play_circle_fill,
-                //         color: Colors.orange,
-                //       ),
-                //       onPressed: () {
-                //         controller.isSpeaking.value
-                //             ? controller.stop()
-                //             : controller.play();
-                //       },
-                //     ),
-                //     Text(
-                //       controller.isSpeaking.value ? 'Stop' : 'Play',
-                //       style: const TextStyle(fontSize: 16),
-                //     ),
-                //   ],
-                // ),
-
-                // const SizedBox(height: 10),
                 MyRegularText(
                   label: controller.ramdevAarti,
-                  // maxLines: 1000,
                   align: TextAlign.justify,
                 ),
               ],

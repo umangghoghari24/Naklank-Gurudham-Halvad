@@ -22,7 +22,7 @@ class AbhishekView extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
-            label: SC.abhishek_darshan.tr,
+            label: SC.abhishekDarshan.tr,
             style: Styles.white18_14W400,),
         actions: [
           Obx(() {
@@ -124,8 +124,8 @@ class AbhishekView extends StatelessWidget {
               ),
               child: MyRegularText(
                   label: controller.isAbhishekRunning.value
-                      ? SC.abhishek_running.tr
-                      : SC.start_abhishek.tr,
+                      ? SC.abhishekRunning.tr
+                      : SC.startAbhishek.tr,
                   style: Styles.white16W600
               ),
             );

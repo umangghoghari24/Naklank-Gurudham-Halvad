@@ -24,13 +24,13 @@ class SettingsView extends GetView<SettingsController> {
         padding: const EdgeInsets.all(16),
         children: [
           MyRegularText(
-            label: SC.theme_mode.tr,
+            label: SC.themeMode.tr,
             style: Styles.blackShade18_16W600,
           ),
           // SizedBox(height: 5.h),
           Obx(() => SwitchListTile(
             title: MyRegularText(
-              label: SC.dark_mode.tr,
+              label: SC.darkMode.tr,
               style: Styles.black16W400,
             ),
             value: controller.isDarkMode.value,

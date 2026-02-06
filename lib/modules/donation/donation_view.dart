@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../utils/color_constants.dart';
 import '../../utils/styles.dart';
 import '../../widgets/my_regular_text.dart';
@@ -25,16 +24,14 @@ class DonationViewScreen extends GetView<DonationController> {
         child: GridView.builder(
           itemCount: controller.donations.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,   // 🔥 1 row ma 3 column
+            crossAxisCount: 2,
             crossAxisSpacing: 5,
             mainAxisSpacing: 5,
             childAspectRatio: 0.70
           ),
 
           itemBuilder: (context, index) {
-
             final item = controller.donations[index];
-
             return GestureDetector(
               onTap: () {
                 Get.to(() => DonationDetailView(donation: item));
@@ -45,8 +42,6 @@ class DonationViewScreen extends GetView<DonationController> {
                 ),
                 child: Column(
                   children: [
-
-                    /// IMAGE
                     Expanded(
                       child: ClipRRect(
                         borderRadius: const BorderRadius.only(
@@ -54,14 +49,12 @@ class DonationViewScreen extends GetView<DonationController> {
                           topRight: Radius.circular(11),
                         ),
                         child: Image.asset(
-                          item.images.first,   // 👈 first image
+                          item.images.first,
                           // width: double.infinity,
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
-
-                    /// TITLE AT BOTTOM
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(

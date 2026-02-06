@@ -1,6 +1,6 @@
 class DonationViewModel {
 
-  final List<String> images;   // 🔥 multiple images
+  final List<String> images;
   final String title;
   final String description;
   final String qrImage;

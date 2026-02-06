@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../../utils/string.dart';
+import '../../utils/bij_data.dart';
 
 class BijController extends GetxController {
 

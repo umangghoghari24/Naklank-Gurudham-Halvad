@@ -28,7 +28,7 @@ class HomeView extends GetView<HomeController> {
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
-            label: SC.app_name.tr,
+            label: SC.appName.tr,
         style: Styles.white16W600,),
         centerTitle: true,
         actions: [
@@ -64,7 +64,7 @@ class HomeView extends GetView<HomeController> {
                     Get.to(() => BijView(), binding: BijBinding());
                   }),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.shivling, SC.abhishek_darshan.tr, () {
+                  _menu(AssetsPath.shivling, SC.abhishekDarshan.tr, () {
                     Get.to(() => AbhishekView(), binding: AbhishekBinding());
                   }),
                   SizedBox(height: 5.h),

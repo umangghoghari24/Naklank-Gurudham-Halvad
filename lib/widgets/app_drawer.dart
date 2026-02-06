@@ -50,7 +50,7 @@ class AppDrawer extends StatelessWidget {
                     ),
                   ),
                   MyRegularText(
-                    label: SC.app_name.tr,
+                    label: SC.appName.tr,
                     style: Styles.white18W600,
                     align: TextAlign.start,
                     maxLines: 2,
@@ -87,7 +87,7 @@ class AppDrawer extends StatelessWidget {
             ),
             _drawerItem(
               imagePath: AssetsPath.shivling,
-              title: SC.abhishek_darshan.tr,
+              title: SC.abhishekDarshan.tr,
               onTap: () {
                 Get.to(
                       () => AbhishekView(),

@@ -26,7 +26,7 @@ class SplashView extends GetView<SplashController> {
             ),
             const SizedBox(height: 20),
             MyRegularText(
-              label: SC.app_name.tr,
+              label: SC.appName.tr,
               style: Styles.blackShade18_16W600,
               align: TextAlign.center,
             ),

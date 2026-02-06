@@ -25,7 +25,7 @@ class BijView extends GetView<BijController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             MyRegularText(
-              label: SC.bij_title.tr,
+              label: SC.bijTitle.tr,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
