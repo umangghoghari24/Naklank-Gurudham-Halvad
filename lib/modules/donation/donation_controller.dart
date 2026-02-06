@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import '../../utils/assets_path.dart';
+import '../../utils/string.dart';
 import 'donation_model/donation_data_model.dart';
 
 class DonationController extends GetxController {
@@ -20,8 +21,8 @@ UPI ID: ramdevmandir@sbi''';
         AssetsPath.templeDemo,
         AssetsPath.bannerTemple,
       ],
-      title: 'mandir_donation'.tr,
-      description: 'mandir_donation_desc'.tr,
+      title: SC.mandirDonation.tr,
+      description: SC.mandirDonationDesc.tr,
       qrImage: AssetsPath.iconAarti,
       bankDetails: commonBankDetails,
     ),
@@ -33,8 +34,8 @@ UPI ID: ramdevmandir@sbi''';
         AssetsPath.bannerTemple,
         AssetsPath.templeDemo,
       ],
-      title: 'gaushala_donation'.tr,
-      description: 'gaushala_donation_desc'.tr,
+      title: SC.gaushalaDonation.tr,
+      description: SC.gaushalaDonationDesc.tr,
       qrImage: AssetsPath.iconAarti,
       bankDetails: commonBankDetails,
     ),
@@ -45,8 +46,8 @@ UPI ID: ramdevmandir@sbi''';
         AssetsPath.bannerTemple,
         AssetsPath.templeDemo,
       ],
-      title: 'annakshetra_donation'.tr,
-      description: 'annakshetra_donation_desc'.tr,
+      title: SC.annakshetraDonation.tr,
+      description: SC.annakshetraDonationDesc.tr,
       qrImage: AssetsPath.iconAarti,
       bankDetails: commonBankDetails,
     ),

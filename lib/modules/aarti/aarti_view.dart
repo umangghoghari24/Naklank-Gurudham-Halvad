@@ -18,7 +18,7 @@ class AartiView extends GetView<AartiController> {
         backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
               label: SC.aarti.tr,
-          style: Styles.white18_14W400,)),
+          style: Styles.white18W600,)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

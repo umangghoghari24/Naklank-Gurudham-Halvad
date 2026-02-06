@@ -15,12 +15,13 @@ class SatsangView extends GetView<SatsangController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppDrawer(),
+      drawer: AppDrawer(),
       appBar: AppBar(
+          iconTheme: IconThemeData(color: ColorConstant.whiteColor),
           backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
             label: SC.satsang.tr,
-          style: Styles.blackShade18_16W600,)),
+          style: Styles.white18W600,)),
       body: Column(
         children: [
           GestureDetector(

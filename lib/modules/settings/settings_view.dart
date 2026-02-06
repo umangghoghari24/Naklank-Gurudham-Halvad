@@ -12,12 +12,13 @@ class SettingsView extends GetView<SettingsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppDrawer(),
+      drawer: AppDrawer(),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
           label: SC.settings.tr,
-          style: Styles.blackShade18_16W600,
+          style: Styles.white18W600,
         ),
       ),
       body: ListView(

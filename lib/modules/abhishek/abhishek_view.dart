@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/string.dart';
 import '../../utils/styles.dart';
+import '../../widgets/app_drawer.dart';
 import '../../widgets/my_regular_text.dart';
 import 'abhishek_controller.dart';
 import 'jarna_painter.dart';
@@ -19,11 +20,13 @@ class AbhishekView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConstant.lightGreyColorD,
+      drawer: AppDrawer(),
       appBar: AppBar(
-          backgroundColor: ColorConstant.orangeColor,
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
+        backgroundColor: ColorConstant.orangeColor,
           title: MyRegularText(
             label: SC.abhishekDarshan.tr,
-            style: Styles.white18_14W400,),
+            style: Styles.white18W600,),
         actions: [
           Obx(() {
             return IconButton(

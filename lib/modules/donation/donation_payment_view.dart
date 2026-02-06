@@ -20,7 +20,11 @@ class DonationPaymentView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Scan & Pay"),
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
+        backgroundColor: ColorConstant.orangeColor,
+        title:  MyRegularText(
+            label: "Scan & Pay",
+        style: Styles.white18W600,),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

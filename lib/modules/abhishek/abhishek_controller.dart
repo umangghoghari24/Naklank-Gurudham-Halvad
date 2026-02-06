@@ -51,11 +51,11 @@ class AbhishekController extends GetxController
 
   void selectType(AbhishekType type) {
     selectedType.value = type;
-    playStarSound(); // 🔊 when selecting type
+    // playStarSound();
   }
 
   void startAbhishek() async {
-    playStarSound(); // 🔊 when start pressed
+    playStarSound();
 
     isAbhishekRunning.value = true;
     animationController.repeat();

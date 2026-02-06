@@ -14,10 +14,11 @@ class BijView extends GetView<BijController> {
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
             label: SC.bij.tr,
-        style: Styles.blackShade18_16W600,),
+        style: Styles.white18W600,),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),

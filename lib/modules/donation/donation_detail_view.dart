@@ -24,9 +24,11 @@ class DonationDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: ColorConstant.whiteColor),
+        backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
           label: donation.title,
-          style: Styles.blackShade18_16W600,
+          style: Styles.white18W600,
         ),
       ),
 
@@ -89,7 +91,7 @@ class DonationDetailView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: MyRegularText(
                 label: donation.description.tr,
-                style: Styles.blackShade18_16W600,
+                style: Styles.black16W400,
                 align: TextAlign.start,
                 maxLines: 100,
               ),
