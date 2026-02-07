@@ -56,7 +56,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.donation,
-      page: () => DonationViewScreen(),
+      page: () => DonationView(),
       binding: DonationBinding(),
     ),
 

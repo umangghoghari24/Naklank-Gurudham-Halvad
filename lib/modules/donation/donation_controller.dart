@@ -17,7 +17,7 @@ UPI ID: ramdevmandir@sbi''';
 
     DonationViewModel(
       images: [
-        AssetsPath.iconAarti,
+        AssetsPath.templeDemo,
         AssetsPath.templeDemo,
         AssetsPath.bannerTemple,
       ],

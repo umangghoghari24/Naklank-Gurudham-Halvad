@@ -33,14 +33,19 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
         actions: [
           PopupMenuButton<String>(
-            icon: Icon(Icons.language),
+            offset: Offset(0, 50.h),
+            icon: const Icon(Icons.language),
             onSelected: LanguageService.changeLanguage,
-            itemBuilder: (_) =>  [
-              PopupMenuItem(value: 'gu', child: MyRegularText(label: 'ગુજરાતી')),
-              PopupMenuItem(value: 'hi', child: MyRegularText(label: 'हिंदी')),
-              PopupMenuItem(value: 'en', child: MyRegularText(label: 'English')),
-            ],
+            itemBuilder: (context) {
+              final selected = LanguageService.currentCode;
+              return [
+                _langItem('gu', 'ગુજરાતી', selected),
+                _langItem('hi', 'हिंदी ', selected),
+                _langItem('en', 'English', selected),
+              ];
+            },
           )
+
         ],
       ),
       body: Padding(
@@ -68,7 +73,7 @@ class HomeView extends GetView<HomeController> {
                     Get.to(() => AbhishekView(), binding: AbhishekBinding());
                   }),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.iconBhajan, SC.satsang.tr, () {
+                  _menu(AssetsPath.iconSantavni, SC.satsang.tr, () {
                     Get.to(() => SatsangView(), binding: SatsangBinding());
                   }),
                   SizedBox(height: 5.h),
@@ -78,7 +83,7 @@ class HomeView extends GetView<HomeController> {
                     Get.toNamed(AppRoutes.gallery);
                   }),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.iconGallery, 'Donation', () {
+                  _menu(AssetsPath.iconDonate, SC.donation.tr, () {
                     Get.toNamed(AppRoutes.donation);
                   }),
                   _menu(AssetsPath.iconStore, SC.store.tr, () {}),
@@ -132,6 +137,41 @@ class HomeView extends GetView<HomeController> {
       height: 180.h,
       fit: BoxFit.cover,
       borderRadius: BorderRadius.circular(16), // 🟩 rounded banner
+    );
+  }
+  PopupMenuItem<String> _langItem(
+      String code,
+      String langLabel,
+      String selectedCode,
+      ) {
+    final bool isSelected = code == selectedCode;
+
+    return PopupMenuItem<String>(
+      value: code,
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        color: isSelected
+            ? ColorConstant.orangeColor.withOpacity(0.4)
+            : Colors.transparent,
+        child: Row(
+          children: [
+            // const Icon(Icons.language, size: 18),
+            SizedBox(width: 8.w),
+            Expanded(
+              child: MyRegularText(
+                label: langLabel,
+              ),
+            ),
+            if (isSelected)
+              Icon(
+                Icons.check_circle,
+                color: ColorConstant.orangeColor,
+                size: 20.sp,
+              ),
+          ]
+        ),
+      ),
     );
   }
 

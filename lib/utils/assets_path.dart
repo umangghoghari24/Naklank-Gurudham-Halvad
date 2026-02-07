@@ -19,6 +19,9 @@ class AssetsPath {
   static const String iconStore = '$_images/store_icon.jpg';
   static const String iconHistory = '$_images/history_icon.jpg';
   static const String iconSettings = '$_images/setting_icon.jpg';
+  static const String iconBij2 = '$_images/bij2_icon.jpg';
+  static const String iconDonate= '$_images/donate_icon.jpg';
+  static const String iconSantavni= '$_images/santvani_icon.jpg';
 
 
   // ---------------- Sounds folder ----------------

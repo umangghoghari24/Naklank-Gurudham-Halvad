@@ -1,7 +1,10 @@
 import 'package:calender/utils/color_constants.dart';
 import 'package:calender/widgets/app_icon_image.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import '../../utils/string.dart';
 import '../../utils/styles.dart';
 import '../../widgets/my_regular_text.dart';
 import 'donation_model/donation_data_model.dart';
@@ -23,7 +26,7 @@ class DonationPaymentView extends StatelessWidget {
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
         title:  MyRegularText(
-            label: "Scan & Pay",
+          label: SC.scanPay.tr,
         style: Styles.white18W600,),
       ),
       body: SingleChildScrollView(

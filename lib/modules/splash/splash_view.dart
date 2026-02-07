@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/assets_path.dart';
 import '../../utils/string.dart';
@@ -19,8 +20,8 @@ class SplashView extends GetView<SplashController> {
           children: [
             AppIconImage(
               imagePath: AssetsPath.bannerTemple,
-              width: 200,
-              height: 200,
+              width: 200.w,
+              height: 200.h,
               fit: BoxFit.cover,
               borderRadius: BorderRadius.circular(20),
             ),

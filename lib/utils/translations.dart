@@ -27,6 +27,8 @@ class AppTranslations extends Translations {
       SC.language : 'ભાષા પસંદ કરો',
       SC.darkMode : 'ડાર્ક મોડ',
       SC.themeMode : 'થીમ મોડ',
+      SC.lightMode : 'લાઇટ મોડ',
+
 
       /// Abhishek / Darshan
       SC.water : 'પાણી',
@@ -36,6 +38,10 @@ class AppTranslations extends Translations {
       SC.abhishekDarshan : 'અભિષેક દર્શન',
 
       /// Donation
+      SC.selectDonation : 'દાન પસંદ કરો',
+      SC.donation : 'દાન',
+      SC.scanPay : 'સ્કેન કરો અને પેમેન્ટ કરો',
+      SC.donateNow : 'દાન કરો',
       SC.mandirDonation : 'મંદિર દાન',
       SC.mandirDonationDesc : 'મંદિર દાન કરવું એ મહાન પુણ્ય કર્મ માનવામાં આવે છે.',
 
@@ -73,6 +79,8 @@ class AppTranslations extends Translations {
       SC.language : 'भाषा चुनें',
       SC.darkMode : 'डार्क मोड',
       SC.themeMode : 'थीम मोड',
+      SC.lightMode : 'लाइट मोड',
+
 
       /// Abhishek / Darshan
       SC.water : 'जल',
@@ -82,6 +90,10 @@ class AppTranslations extends Translations {
       SC.abhishekDarshan : 'अभिषेक दर्शन',
 
       /// Donation
+      SC.selectDonation : 'दान चुनें',
+      SC.donation : 'दान',
+      SC.donateNow : 'दान करें',
+      SC.scanPay : 'स्कैन करें और भुगतान करें',
       SC.mandirDonation : 'मंदिर दान',
       SC.mandirDonationDesc : 'मंदिर में दान करना महान पुण्य कर्म है.',
 
@@ -119,6 +131,8 @@ class AppTranslations extends Translations {
       SC.language : 'Select Language',
       SC.darkMode : 'Dark Mode',
       SC.themeMode : 'Theme Mode',
+      SC.lightMode : 'Light Mode',
+
 
       /// Abhishek / Darshan
       SC.water : 'Water',
@@ -128,6 +142,10 @@ class AppTranslations extends Translations {
       SC.abhishekDarshan : 'Abhishek Darshan',
 
       /// Donation
+      SC.selectDonation : 'Select Donation',
+      SC.donation : 'Donation',
+      SC.scanPay : 'Scan & Pay',
+      SC.donateNow : 'Donate Now',
       SC.mandirDonation : 'Mandir Donation',
       SC.mandirDonationDesc : 'Donating to temple is a virtuous act.',
 

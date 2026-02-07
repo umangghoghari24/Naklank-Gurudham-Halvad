@@ -1,5 +1,6 @@
 import 'package:calender/modules/abhishek/abhishek_view.dart';
 import 'package:calender/modules/bij/bij_view.dart';
+import 'package:calender/modules/donation/donation_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -7,6 +8,7 @@ import '../modules/aarti/aarti_binding.dart';
 import '../modules/aarti/aarti_view.dart';
 import '../modules/abhishek/abhishek_binding.dart';
 import '../modules/bij/bij_binding.dart';
+import '../modules/donation/donation_binding.dart';
 import '../modules/gallery/gallery_binding.dart';
 import '../modules/gallery/gallery_view.dart';
 import '../modules/satsang/satsang_binding.dart';
@@ -96,7 +98,7 @@ class AppDrawer extends StatelessWidget {
               },
             ),
             _drawerItem(
-              imagePath: AssetsPath.iconAarti,
+              imagePath: AssetsPath.iconSantavni,
               title: SC.satsang.tr,
               onTap: () {
                 Get.to(
@@ -122,6 +124,16 @@ class AppDrawer extends StatelessWidget {
                 Get.to(
                     () => GalleryView(),
                 binding: GalleryBinding(),
+                );
+              },
+            ),
+            _drawerItem(
+              imagePath: AssetsPath.iconDonate,
+              title: SC.donation.tr,
+              onTap: () {
+                Get.to(
+                      () => DonationView(),
+                  binding: DonationBinding(),
                 );
               },
             ),

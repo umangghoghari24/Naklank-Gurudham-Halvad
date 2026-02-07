@@ -19,7 +19,7 @@ class AbhishekView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstant.lightGreyColorD,
+      // backgroundColor: ColorConstant.lightGreyColorD,
       drawer: AppDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),

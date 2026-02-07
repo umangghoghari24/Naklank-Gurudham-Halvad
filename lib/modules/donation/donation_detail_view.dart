@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../utils/color_constants.dart';
+import '../../utils/string.dart';
 import '../../utils/styles.dart';
 import '../../widgets/my_regular_text.dart';
 import '../../widgets/zoomable_image.dart';
@@ -50,7 +51,7 @@ class DonationDetailView extends StatelessWidget {
             Get.to(() => DonationPaymentView(donation: donation));
           },
           child: MyRegularText(
-            label: "Donate Now",
+            label: SC.donateNow.tr,
             style: Styles.white16W600,
           ),
         ),

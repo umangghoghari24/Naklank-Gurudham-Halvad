@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/color_constants.dart';
+import '../../utils/string.dart';
 import '../../utils/styles.dart';
 import '../../widgets/my_regular_text.dart';
 import '../../widgets/app_drawer.dart';
 import 'donation_controller.dart';
 import 'donation_detail_view.dart';
 
-class DonationViewScreen extends GetView<DonationController> {
+class DonationView extends GetView<DonationController> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class DonationViewScreen extends GetView<DonationController> {
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
         title: MyRegularText(
-          label: "Select Donation",
+          label: SC.selectDonation.tr,
           style: Styles.white18W600,
         ),
       ),

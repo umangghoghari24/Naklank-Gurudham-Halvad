@@ -20,6 +20,8 @@ class SC {
   static const String language = 'language';
   static const String darkMode = 'darkMode';
   static const String themeMode = 'themeMode';
+  static const String lightMode = 'lightMode';
+
 
   /// Abhishek
   static const String water = 'water';
@@ -29,6 +31,11 @@ class SC {
   static const String abhishekDarshan = 'abhishekDarshan';
 
   /// Donation
+  static const String donation = 'donation';
+  static const String scanPay = 'scanPay';
+  static const String selectDonation = 'selectDonation';
+  static const String donateNow = 'donateNow';
+
   static const String mandirDonation = 'mandirDonation';
   static const String mandirDonationDesc = 'mandirDonationDesc';
 
