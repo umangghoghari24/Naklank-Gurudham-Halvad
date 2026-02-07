@@ -3,5 +3,7 @@ const List<String> satsangLinks = [
   'https://youtu.be/WJ1FJwztRtE?si=zK_HDTQcOBMFpr0d',
 
  // YouTube channel
-  "www.youtube.com/@NaklankGurudham9019"
+ //  "www.youtube.com/@NaklankGurudham9019"
+"https://www.youtube.com/@NaklankGurudham9019",
+
 ];

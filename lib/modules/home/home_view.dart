@@ -114,8 +114,8 @@ class HomeView extends GetView<HomeController> {
         leading: ClipOval(
           child: AppIconImage(
             imagePath: imagePath,
-            width: 32.w,
-            height: 32.w,
+            width: 40.w,
+            height: 40.w,
             fit: BoxFit.cover,
           ),
         ),

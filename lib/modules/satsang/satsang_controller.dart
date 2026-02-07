@@ -5,7 +5,7 @@ import '../../utils/satsang_data.dart';
 class SatsangController extends GetxController {
 
   final String channelUrl =
-      "www.youtube.com/@NaklankGurudham9019";
+      "https://www.youtube.com/@NaklankGurudham9019";
 
   final satsangList = <SatsangItem>[
     SatsangItem(

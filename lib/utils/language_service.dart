@@ -9,13 +9,13 @@ class LanguageService {
   /// 🔹 Init language at app start
   static Future<void> init() async {
     if (!_box.hasData(_key)) {
-      _box.write(_key, 'gu'); // default Gujarati
+      _box.write(_key, 'en'); // default Gujarati
     }
   }
 
   /// 🔹 Get initial locale
   static Locale getInitialLocale() {
-    final code = _box.read(_key) ?? 'gu';
+    final code = _box.read(_key) ?? 'en';
 
     switch (code) {
       case 'hi':
@@ -44,5 +44,5 @@ class LanguageService {
   }
 
   /// 🔹 Current language code
-  static String get currentCode => _box.read(_key) ?? 'gu';
+  static String get currentCode => _box.read(_key) ?? 'en';
 }

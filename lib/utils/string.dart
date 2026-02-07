@@ -49,4 +49,9 @@ class SC {
   static const String ramdevPirAarti = 'ramdevPirAarti';
   static const String morningAarti = 'morningAarti';
   static const String eveningAarti = 'eveningAarti';
+
+  /// Satsang
+  static const String satsangChannelName = 'NaklankGurudham Channel';
+  static const String satsangChannelHint = 'Tap to open & subscribe';
+  static const String santvaniTitle = 'શ્રી દલસુખરામ બાપુ ની સંતવાણી';
 }

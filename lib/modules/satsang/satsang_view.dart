@@ -49,12 +49,12 @@ class SatsangView extends GetView<SatsangController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           MyRegularText(
-                            label: "NaklankGurudham Channel",
-                            style: Styles.black16W600,
+                            label: SC.satsangChannelName,
+                            style: Styles.black16W400,
                           ),
                           SizedBox(height: 4.h),
                           MyRegularText(
-                            label: "Tap to open & subscribe",
+                            label: SC.satsangChannelHint,
                             style: Styles.grey14W400,
                           ),
                         ],
@@ -85,8 +85,8 @@ class SatsangView extends GetView<SatsangController> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15),
                     child: AppIconImage(
-                      width: 45,
-                      height: 45,
+                      width: 45.w,
+                      height: 45.h,
                       fit: BoxFit.cover,
                       imagePath: AssetsPath.iconAarti,
                     ),
@@ -94,7 +94,7 @@ class SatsangView extends GetView<SatsangController> {
                    SizedBox(width: 5.w),
                   Expanded(
                     child: MyRegularText(
-                      label: "શ્રી દલસુખરામ બાપુ ની સંતવાણી",
+                      label: SC.santvaniTitle,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

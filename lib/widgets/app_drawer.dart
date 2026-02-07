@@ -46,8 +46,8 @@ class AppDrawer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(11),
                     child: AppIconImage(
                       imagePath: AssetsPath.bannerTemple,
-                      width: 150.w,
-                      height: 80.w,
+                      width: 140.w,
+                      height: 70.h,
                       fit: BoxFit.cover,
                     ),
                   ),
