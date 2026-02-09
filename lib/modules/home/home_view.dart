@@ -23,7 +23,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      // backgroundColor: ColorConstant.greenColor,
+      // backgroundColor: ColorConstant.lightGreyColorD,
       appBar: AppBar(
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),
         backgroundColor: ColorConstant.orangeColor,
@@ -49,20 +49,16 @@ class HomeView extends GetView<HomeController> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
-            // IMAGE NON-SCROLL
             _topBanner(),
-            SizedBox(height: 16.h),
-
-            // ONLY CARDS SCROLL
+            SizedBox(height: 10.h),
             Expanded(
               child: ListView(
                 children: [
                   _menu(AssetsPath.iconAarti, SC.aarti.tr, () {
                     Get.toNamed(AppRoutes.aarti);
-                    // Get.to(() => AartiView(), binding: AartiBinding());
                   }),
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconBij, SC.bij.tr, () {
@@ -86,6 +82,7 @@ class HomeView extends GetView<HomeController> {
                   _menu(AssetsPath.iconDonate, SC.donation.tr, () {
                     Get.toNamed(AppRoutes.donation);
                   }),
+                  SizedBox(height: 5.h),
                   _menu(AssetsPath.iconStore, SC.store.tr, () {
                     Get.toNamed(AppRoutes.store);
                   }),
@@ -97,7 +94,6 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
       ),
-
     );
   }
 
@@ -126,21 +122,36 @@ class HomeView extends GetView<HomeController> {
           align: TextAlign.start,
           style: Styles.black16W400,
         ),
-        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+        trailing: const Icon(Icons.double_arrow,
+            size: 16),
         onTap: onTap,
       ),
     );
   }
 
   Widget _topBanner() {
-    return AppIconImage(
-      imagePath: AssetsPath.bannerTemple,
-      width: double.infinity,
-      height: 180.h,
-      fit: BoxFit.cover,
-      borderRadius: BorderRadius.circular(16), // 🟩 rounded banner
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(11),
+        gradient: LinearGradient(
+          colors: [
+            ColorConstant.orangeColor,
+            ColorConstant.sendGreen,
+          ],
+        ),
+      ),
+      padding: EdgeInsets.all(3), // border thickness
+      child: AppIconImage(
+        imagePath: AssetsPath.temple,
+        width: double.infinity,
+        height: 200.h,
+        fit: BoxFit.cover,
+        borderRadius: BorderRadius.circular(11),
+      ),
     );
   }
+
+
   PopupMenuItem<String> _langItem(
       String code,
       String langLabel,
