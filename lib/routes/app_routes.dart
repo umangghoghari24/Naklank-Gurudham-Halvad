@@ -8,4 +8,5 @@ abstract class AppRoutes {
   static const settings = '/settings';
   static const gallery = '/gallery';
   static const donation = '/donation';
+  static const store = '/store';
 }

@@ -53,5 +53,5 @@ class SC {
   /// Satsang
   static const String satsangChannelName = 'NaklankGurudham Channel';
   static const String satsangChannelHint = 'Tap to open & subscribe';
-  static const String santvaniTitle = 'શ્રી દલસુખરામ બાપુ ની સંતવાણી';
+  static const String santvaniTitle = 'શ્રી દલસુખરામ બાપુની સંતવાણી';
 }

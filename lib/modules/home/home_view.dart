@@ -79,14 +79,16 @@ class HomeView extends GetView<HomeController> {
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconBhajan, SC.bhajan.tr, () {}),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.iconGallery, SC.gallery.tr, () {
+                  _menu(AssetsPath.iconGalleryOrg, SC.gallery.tr, () {
                     Get.toNamed(AppRoutes.gallery);
                   }),
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconDonate, SC.donation.tr, () {
                     Get.toNamed(AppRoutes.donation);
                   }),
-                  _menu(AssetsPath.iconStore, SC.store.tr, () {}),
+                  _menu(AssetsPath.iconStore, SC.store.tr, () {
+                    Get.toNamed(AppRoutes.store);
+                  }),
                   SizedBox(height: 5.h),
                   _menu(AssetsPath.iconHistory, SC.history.tr, () {}),
                 ],
@@ -114,8 +116,8 @@ class HomeView extends GetView<HomeController> {
         leading: ClipOval(
           child: AppIconImage(
             imagePath: imagePath,
-            width: 40.w,
-            height: 40.w,
+            width: 35.w,
+            height: 35.w,
             fit: BoxFit.cover,
           ),
         ),

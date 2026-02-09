@@ -118,7 +118,7 @@ class AppDrawer extends StatelessWidget {
               },
             ),
             _drawerItem(
-              imagePath: AssetsPath.iconGallery,
+              imagePath: AssetsPath.iconGalleryOrg,
               title: SC.gallery.tr,
               onTap: () {
                 Get.to(
@@ -194,13 +194,13 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  Widget _langItem(String code, String label) {
-    return ListTile(
-      title: MyRegularText(label: label),
-      onTap: () {
-        LanguageService.changeLanguage(code);
-        Get.back();
-      },
-    );
-  }
+  // Widget _langItem(String code, String label) {
+  //   return ListTile(
+  //     title: MyRegularText(label: label),
+  //     onTap: () {
+  //       LanguageService.changeLanguage(code);
+  //       Get.back();
+  //     },
+  //   );
+  // }
 }

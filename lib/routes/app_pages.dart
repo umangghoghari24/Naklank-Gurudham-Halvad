@@ -1,3 +1,5 @@
+import 'package:calender/modules/store/store_home/store_home_binding.dart';
+import 'package:calender/modules/store/store_home/store_home_view.dart';
 import 'package:get/get.dart';
 import '../modules/abhishek/abhishek_binding.dart';
 import '../modules/abhishek/abhishek_view.dart';
@@ -59,6 +61,10 @@ class AppPages {
       page: () => DonationView(),
       binding: DonationBinding(),
     ),
-
+    GetPage(
+      name: AppRoutes.store,
+      page: () => StoreHomeView(),
+      binding: StoreHomeBinding(),
+    ),
   ];
 }

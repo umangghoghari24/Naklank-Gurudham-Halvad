@@ -76,19 +76,19 @@ class SatsangView extends GetView<SatsangController> {
             margin: const EdgeInsets.all(12),
             elevation: 3,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(11),
             ),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(11),
                     child: AppIconImage(
-                      width: 45.w,
-                      height: 45.h,
+                      width: 48.w,
+                      height: 48.w,
                       fit: BoxFit.cover,
-                      imagePath: AssetsPath.iconAarti,
+                      imagePath: AssetsPath.dalsukhBapu,
                     ),
                   ),
                    SizedBox(width: 5.w),
