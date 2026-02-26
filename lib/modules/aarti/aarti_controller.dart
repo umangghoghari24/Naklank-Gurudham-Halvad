@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import '../../utils/aarti_data.dart';
+import '../../utils/notification_service.dart';
 import '../../utils/string.dart';
 
 class AartiController extends GetxController {
@@ -44,4 +45,32 @@ class AartiController extends GetxController {
       return ramdevPirMorningAartiGu;
     }
   }
+  // void setAartiReminder({
+  //   required String title,
+  //   required String time,
+  // }) {
+  //   // time example: 5:00 AM
+  //   final parts = time.split(" ");
+  //   final hm = parts[0].split(":");
+  //
+  //   int hour = int.parse(hm[0]);
+  //   int minute = int.parse(hm[1]);
+  //
+  //   if (parts[1] == "PM" && hour != 12) hour += 12;
+  //   if (parts[1] == "AM" && hour == 12) hour = 0;
+  //
+  //   NotificationService.scheduleDaily(
+  //     id: title.hashCode,
+  //     title: "Aarti Reminder",
+  //     body: title,
+  //     hour: hour,
+  //     minute: minute,
+  //   );
+  //
+  //   Get.snackbar(
+  //     "Success",
+  //     "Daily reminder set for $title",
+  //     snackPosition: SnackPosition.BOTTOM,
+  //   );
+  // }
 }

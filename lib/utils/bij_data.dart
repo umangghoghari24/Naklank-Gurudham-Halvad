@@ -46,3 +46,51 @@ const List<Map<String, String>> ramdevBijEn = [
   {'date': '11 November 2026', 'month': 'Margashirsha'},
   {'date': '11 December 2026', 'month': 'Pausha'},
 ];
+
+// Gujarati meanings
+const List<String> ramdevBijMeaningGu = [
+  "મહા માસની બીજ ધર્મ, જપ અને તપ માટે અતિ શુભ માનવામાં આવે છે.",
+  "ફાગણ બીજ ભક્તિભાવ વધારનાર દિવસ છે.",
+  "ચૈત્ર બીજ નવા કાર્યના આરંભ માટે ઉત્તમ છે.",
+  "વૈશાખ બીજ દાન પુણ્ય વધારનાર છે.",
+  "જેઠ બીજ પર વ્રત કરવાથી સુખ સમૃદ્ધિ મળે છે.",
+  "અષાઢ બીજ પર જળદાન શુભ માનવામાં આવે છે.",
+  "શ્રાવણ બીજ શિવભક્તિ માટે શ્રેષ્ઠ છે.",
+  "ભાદરવો બીજ સાધના માટે ઉત્તમ છે.",
+  "આસો બીજ પર દાન કરવાથી પુણ્ય મળે છે.",
+  "કારતક બીજ દીપદાન માટે શુભ છે.",
+  "માગશર બીજ સત્સંગ માટે શ્રેષ્ઠ છે.",
+  "પોષ બીજ પર તપસ્યા ફળદાયી છે.",
+];
+
+// Hindi meanings
+const List<String> ramdevBijMeaningHi = [
+  "माघ मास की बीज जप और तप के लिए श्रेष्ठ है।",
+  "फाल्गुन बीज भक्ति बढ़ाने वाली है।",
+  "चैत्र बीज नए कार्य आरंभ करने हेतु शुभ है।",
+  "वैशाख बीज दान पुण्य देने वाली है।",
+  "ज्येष्ठ बीज व्रत के लिए उत्तम है।",
+  "आषाढ़ बीज जलदान हेतु शुभ है।",
+  "श्रावण बीज शिवभक्ति के लिए श्रेष्ठ है।",
+  "भाद्रपद बीज साधना के लिए उत्तम है।",
+  "आश्विन बीज दान पुण्य देने वाली है।",
+  "कार्तिक बीज दीपदान हेतु शुभ है।",
+  "मार्गशीर्ष बीज सत्संग के लिए श्रेष्ठ है।",
+  "पौष बीज तपस्या के लिए उत्तम है।",
+];
+
+// English meanings
+const List<String> ramdevBijMeaningEn = [
+  "Magha Bij is auspicious for chanting and penance.",
+  "Phalguna Bij increases devotion.",
+  "Chaitra Bij is good for new beginnings.",
+  "Vaishakha Bij is auspicious for charity.",
+  "Jyeshtha Bij is good for fasting.",
+  "Ashadha Bij is auspicious for water donation.",
+  "Shravana Bij is best for Shiva devotion.",
+  "Bhadrapada Bij is good for spiritual practice.",
+  "Ashwin Bij gives merit through charity.",
+  "Kartika Bij is good for lighting lamps.",
+  "Margashirsha Bij is good for satsang.",
+  "Pausha Bij is good for penance.",
+];

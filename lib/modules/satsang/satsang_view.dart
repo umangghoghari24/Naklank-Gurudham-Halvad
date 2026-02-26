@@ -72,8 +72,8 @@ class SatsangView extends GetView<SatsangController> {
             color: ColorConstant.orangeColor,
             endIndent: 15,indent: 15,),
           Card(
-            color: ColorConstant.sendGreen,
-            margin: const EdgeInsets.all(12),
+            color: ColorConstant.lightBlackShade,
+            margin: const EdgeInsets.all(11),
             elevation: 3,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(11),

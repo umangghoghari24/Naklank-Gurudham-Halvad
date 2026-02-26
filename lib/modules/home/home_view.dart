@@ -61,36 +61,48 @@ class HomeView extends GetView<HomeController> {
                     Get.toNamed(AppRoutes.aarti);
                   }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.iconBij, SC.bij.tr, () {
-                    Get.to(() => BijView(), binding: BijBinding());
+                    Get.toNamed(AppRoutes.bij);
                   }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.shivling, SC.abhishekDarshan.tr, () {
-                    Get.to(() => AbhishekView(), binding: AbhishekBinding());
+                    Get.toNamed(AppRoutes.abhishek);
                   }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.iconSantavni, SC.satsang.tr, () {
-                    Get.to(() => SatsangView(), binding: SatsangBinding());
+                    Get.toNamed(AppRoutes.satsang);
                   }),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.iconBhajan, SC.bhajan.tr, () {}),
+
+                  _menu(AssetsPath.iconBhajan, SC.bhajan.tr, () {
+                    // TODO: Add Bhajan route later
+                  }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.iconGalleryOrg, SC.gallery.tr, () {
                     Get.toNamed(AppRoutes.gallery);
                   }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.iconDonate, SC.donation.tr, () {
                     Get.toNamed(AppRoutes.donation);
                   }),
                   SizedBox(height: 5.h),
+
                   _menu(AssetsPath.iconStore, SC.store.tr, () {
                     Get.toNamed(AppRoutes.store);
                   }),
                   SizedBox(height: 5.h),
-                  _menu(AssetsPath.iconHistory, SC.history.tr, () {}),
+
+                  _menu(AssetsPath.iconHistory, SC.history.tr, () {
+                    // TODO: Add History route later
+                  }),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

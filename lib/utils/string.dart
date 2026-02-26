@@ -3,6 +3,7 @@ class SC {
 
   /// App
   static const String appName = 'appName';
+  static const String iNRSymbol = '₹';
 
   /// Bottom Menu
   static const String home = 'home';

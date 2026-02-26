@@ -1,6 +1,7 @@
 import 'package:calender/modules/abhishek/abhishek_view.dart';
 import 'package:calender/modules/bij/bij_view.dart';
 import 'package:calender/modules/donation/donation_view.dart';
+import 'package:calender/modules/store/store_home/store_home_binding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -15,8 +16,8 @@ import '../modules/satsang/satsang_binding.dart';
 import '../modules/satsang/satsang_view.dart';
 import '../modules/settings/settings_binding.dart';
 import '../modules/settings/settings_view.dart';
+import '../modules/store/store_home/store_home_view.dart';
 import '../utils/assets_path.dart';
-import '../utils/language_service.dart';
 import '../utils/string.dart';
 import '../widgets/my_regular_text.dart';
 import '../utils/color_constants.dart';
@@ -38,7 +39,6 @@ class AppDrawer extends StatelessWidget {
               decoration: BoxDecoration(
                 color: ColorConstant.orangeColor,
               ),
-
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -141,10 +141,10 @@ class AppDrawer extends StatelessWidget {
               imagePath: AssetsPath.iconStore,
               title: SC.store.tr,
               onTap: () {
-                // Get.to(
-                //     () => BijView(),
-                // binding: BijBinding(),
-                // );
+                Get.to(
+                    () => StoreHomeView(),
+                binding: StoreHomeBinding(),
+                );
               },
             ),
             _drawerItem(

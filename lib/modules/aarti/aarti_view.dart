@@ -26,7 +26,7 @@ class AartiView extends GetView<AartiController> {
           children: [
             ...controller.aartiList.map((e) => Card(
               child: ListTile(
-                leading: const Icon(Icons.watch_later),
+                leading: const Icon(Icons.access_time_sharp),
                 title: MyRegularText(label:  e['title']!,
                   align: TextAlign.start,
                   style: Styles.black16W400,),
@@ -34,6 +34,12 @@ class AartiView extends GetView<AartiController> {
                 onTap: () {
                   controller.onAartiTap(e['id']!);
                 },
+                // onLongPress: () {
+                //   controller.setAartiReminder(
+                //     title: e['title']!,
+                //     time: e['time']!,
+                //   );
+                // },
               ),
             )),
              SizedBox(height: 15.h),

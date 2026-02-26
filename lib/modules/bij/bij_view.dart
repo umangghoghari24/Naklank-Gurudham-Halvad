@@ -12,6 +12,7 @@ class BijView extends GetView<BijController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: ColorConstant.blueColor,
       drawer: const AppDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: ColorConstant.whiteColor),
@@ -21,7 +22,7 @@ class BijView extends GetView<BijController> {
         style: Styles.white18W600,),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,37 +34,80 @@ class BijView extends GetView<BijController> {
                 color: ColorConstant.redColor,
               ),
             ),
-             SizedBox(height: 12.h),
-            Expanded(
-              child: ListView.builder(
-                itemCount: controller.bijDates.length,
-                itemBuilder: (context, index) {
-                  final item = controller.bijDates[index];
-
-                  return Card(
-                    // color: ColorConstant.sendGreen,
+            Divider(
+              thickness: 2,
+              color: ColorConstant.orangeColor,
+              endIndent: 5,indent: 5,),
+            // SizedBox(height: 12.h),
+          Expanded(
+            child: ListView.builder(
+              itemCount: controller.bijDates.length,
+              itemBuilder: (context, index) {
+                final item = controller.bijDates[index];
+                return GestureDetector(
+                  onTap: () {
+                    controller.toggle(index);
+                  },
+                  child: Card(
                     elevation: 3,
-                    shadowColor: ColorConstant.greyBorderColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(11),
                     ),
-                    child: ListTile(
-                      title: MyRegularText(
-                          label:  item['date']!,
-                      align: TextAlign.start,
-                      style: Styles.black16W400,),
-                      trailing: MyRegularText(
-                        label: item['month']!,
-                        style: Styles.black16W400,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          /// Date + Month
+                          Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              MyRegularText(
+                                label: item['date'] ?? '',
+                                style: Styles.black16W400,
+                              ),
+                              MyRegularText(
+                                label: item['month'] ?? '',
+                                style: Styles.black16W400,
+                              ),
+                            ],
+                          ),
+
+                          /// ONLY THIS PART REACTIVE
+                          Obx(() => controller.expandedList[index]
+                              ? Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.all(10),
+                            margin: EdgeInsets.only(top: 5.h,),
+                            decoration: BoxDecoration(
+                              color: ColorConstant.lightGreyColor,
+                              borderRadius: BorderRadius.circular(11),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Divider(),
+                                MyRegularText(
+                                  maxLines: 3,
+                                  label: controller.bijMeanings[index],
+                                  style: Styles.black14W400,
+                                  align: TextAlign.start,
+                                ),
+                              ],
+                            ),
+                          )
+                              : SizedBox()),
+                        ],
                       ),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ]
       ),
-    );
+    ));
   }
 }

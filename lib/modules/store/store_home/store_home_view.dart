@@ -111,14 +111,11 @@ class StoreHomeView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-
             MyRegularText(
               label: "Contact Store",
               style: Styles.white18_14W400,
             ),
-
             SizedBox(height: 20.h),
-
             ListTile(
               leading: Icon(Icons.call, color: ColorConstant.greenColor,),
               title: MyRegularText(label: "Call", style: Styles.white16W600,),
@@ -126,7 +123,6 @@ class StoreHomeView extends StatelessWidget {
                 launchUrl(Uri.parse("tel:7046151045"));
               },
             ),
-
             ListTile(
               leading: Icon(Icons.chat, color: ColorConstant.greenColor),
               title: MyRegularText(
